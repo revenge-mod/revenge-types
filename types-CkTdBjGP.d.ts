@@ -471,7 +471,7 @@ interface PreInitPluginApiUtils {
 interface PluginApiUtils extends PreInitPluginApiUtils {
   discord: typeof discord_d_exports;
 }
-declare module '#lib/plugins/types' {
+declare module '@revenge-mod/plugins/types' {
   interface UnscopedPreInitPluginApi {
     utils: PreInitPluginApiUtils;
   }

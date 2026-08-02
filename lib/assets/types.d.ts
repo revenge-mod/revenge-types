@@ -9,7 +9,7 @@ interface CustomAsset extends Pick<PackagerAsset, 'name' | 'width' | 'height' | 
   moduleId?: undefined;
 }
 type RegisterableAsset = Omit<CustomAsset, 'id'>;
-declare module '#lib/react/types' {
+declare module '@revenge-mod/react/types' {
   namespace ReactNative {
     namespace AssetsRegistry {
       interface PackagerAsset {

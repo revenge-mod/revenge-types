@@ -5,7 +5,7 @@ import { StackScreenProps } from "@react-navigation/stack";
 import { ImageSourcePropType, ImageStyle, PressableProps, StyleProp, TextInputProps as TextInputProps$1, TextProps as TextProps$1, TextStyle, View, ViewProps, ViewStyle } from "react-native";
 import * as NodeBuffer from "buffer";
 //#region lib/discord/src/types/api.d.ts
-declare module '#lib/plugins/types' {
+declare module '@revenge-mod/plugins/types' {
   interface InitPluginApi<O extends PluginApiExtensionsOptions> {
     logger: DiscordModules.Logger;
   }

@@ -2,7 +2,7 @@ declare namespace app_d_exports {
   export { reloadApp };
 }
 declare function reloadApp(): void;
-declare module '#lib/modules/native' {
+declare module '@revenge-mod/modules/native' {
   interface NativeMethods {
     'revenge.app.reload': [[], null];
   }

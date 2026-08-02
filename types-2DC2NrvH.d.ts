@@ -383,7 +383,7 @@ type PluginApiInLifecycleMap<O extends PluginApiExtensionsOptions = PluginApiExt
 interface PluginSettingsComponent<O extends PluginApiExtensionsOptions = PluginApiExtensionsOptions> extends FunctionComponent<{
   api: PluginApi<O>;
 }> {}
-declare module '#lib/modules/native' {
+declare module '@revenge-mod/modules/native' {
   interface NativeMethods {
     'revenge.plugins.getConstants': [[], {
       storageRootPath: string;

@@ -9,7 +9,7 @@ interface PluginApiComponents {
   SearchInput: typeof SearchInput;
   TableRowAssetIcon: typeof TableRowAssetIcon;
 }
-declare module '#lib/plugins/types' {
+declare module '@revenge-mod/plugins/types' {
   interface UnscopedInitPluginApi {
     components: PluginApiComponents;
   }

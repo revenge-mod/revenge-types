@@ -1,4 +1,4 @@
-import { n as Metro } from "../../types-CkTdBjGP.js";
+import { n as Metro } from "../../types-D25zR2bB.js";
 import { t as ReactNative } from "../../types-DF_Zi2C5.js";
 //#region lib/assets/src/types.d.ts
 type Asset = PackagerAsset | CustomAsset;

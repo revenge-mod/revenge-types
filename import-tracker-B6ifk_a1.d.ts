@@ -1,4 +1,4 @@
-import { n as Metro } from "./types-CkTdBjGP.js";
+import { n as Metro } from "./types-D25zR2bB.js";
 //#region lib/discord/src/patches/import-tracker.d.ts
 type ModuleFinishedImportingCallback = (id: Metro.ModuleID, path: string) => void;
 declare let ImportTrackerModuleId: Metro.ModuleID;

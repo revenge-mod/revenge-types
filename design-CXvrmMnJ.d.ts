@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "./index-BGGAtr7R.js";
+import { t as DiscordModules } from "./index-Dhk2HO_f.js";
 declare namespace design_d_exports {
   export { Design, FormSwitch };
 }
@@ -7,6 +7,7 @@ declare let FormSwitch: DiscordModules.Components.FormSwitch;
 interface Design {
   createStyles: DiscordModules.Components.Styles.CreateStylesFunction;
   useTooltip: DiscordModules.Components.UseTooltipFunction;
+  TextStyleSheet: DiscordModules.Components.Styles.TextStyleSheet;
   ActionSheet: DiscordModules.Components.ActionSheet;
   ActionSheetRow: DiscordModules.Components.ActionSheetRow;
   ActionSheetSwitchRow: DiscordModules.Components.ActionSheetSwitchRow;

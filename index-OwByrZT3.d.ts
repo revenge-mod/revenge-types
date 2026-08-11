@@ -1,4 +1,4 @@
-import { n as ReactJSXRuntime } from "./index-DgbtscMY.js";
+import { n as ReactJSXRuntime } from "./index-CpgUlsjf.js";
 import { ElementType, JSX, Key, ReactElement } from "react";
 declare namespace index_d_exports {
   export { AfterJSXCallback, AnyJSXFactoryFunction, BeforeJSXCallback, InsteadJSXCallback, afterJSX, beforeJSX, insteadJSX };

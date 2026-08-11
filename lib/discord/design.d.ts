@@ -1,2 +1,2 @@
-import { n as FormSwitch, t as Design } from "../../design-Daj2kl5I.js";
+import { n as FormSwitch, t as Design } from "../../design-CXvrmMnJ.js";
 export { Design, FormSwitch };

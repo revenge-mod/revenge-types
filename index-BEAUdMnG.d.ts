@@ -1,7 +1,7 @@
-import { I as FilterGenerator, P as Filter, Y as FilterScopes } from "./types-CkTdBjGP.js";
-import { t as DiscordModules } from "./index-BGGAtr7R.js";
-import { n as onAnyFluxEventDispatched, r as onFluxEventDispatched, t as FluxEventDispatchPatch } from "./dispatcher-BQiX9YHi.js";
-import { u as WaitForModulesUnsubscribeFunction } from "./index-CR3yfNsI.js";
+import { I as FilterGenerator, P as Filter, q as FilterScopes } from "./types-D25zR2bB.js";
+import { t as DiscordModules } from "./index-Dhk2HO_f.js";
+import { n as onAnyFluxEventDispatched, r as onFluxEventDispatched, t as FluxEventDispatchPatch } from "./dispatcher-DWwXYNtA.js";
+import { u as WaitForModulesUnsubscribeFunction } from "./index-CfMUJbR9.js";
 //#region lib/discord/src/flux/stores.d.ts
 /**
  * A proxy that allows you to access Flux stores by their name, including uninitialized stores.
@@ -21,7 +21,6 @@ declare const Stores: Record<string, DiscordModules.Flux.Store<object>>;
 declare function getStore<T>(name: string, callback: (store: DiscordModules.Flux.Store<T>) => void): WaitForModulesUnsubscribeFunction;
 type WithStore = FilterGenerator<<T>() => Filter<{
   Result: DiscordModules.Flux.Store<T>;
-  RequiresExports: boolean;
   Scopes: [typeof FilterScopes.Uninitialized, typeof FilterScopes.Initialized];
 }>>;
 /**
@@ -30,8 +29,7 @@ type WithStore = FilterGenerator<<T>() => Filter<{
 declare const withStore: WithStore;
 type WithStoreName = FilterGenerator<<T>(name: string) => Filter<{
   Result: DiscordModules.Flux.Store<T>;
-  RequiresExports: true;
-  Scopes: [typeof FilterScopes.Uninitialized, typeof FilterScopes.Initialized];
+  Scopes: [typeof FilterScopes.Initialized];
 }>>;
 /**
  * A with-exports filter that matches a Flux store by its name.

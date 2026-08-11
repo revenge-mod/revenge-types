@@ -1,4 +1,4 @@
-import { i as AnyFunction } from "./types-CkTdBjGP.js";
+import { i as AnyFunction } from "./types-D25zR2bB.js";
 import { n as ReactNavigationParamList } from "./react-navigation-C0E6Cr3d.js";
 import { ComponentProps, ComponentType, FC, MemoExoticComponent, ReactElement, ReactNode, RefAttributes, RefObject } from "react";
 import { StackScreenProps } from "@react-navigation/stack";
@@ -144,7 +144,7 @@ declare namespace DiscordModules {
       type TextWeightWithExtraBold = TextWeight | 'extrabold';
       type RedesignTextCategory = 'message-preview' | 'channel-title';
       type TextVariant = `heading-${BasicTextSizeWithExtraLarges}/${TextWeightWithExtraBold}` | `text-${TextSize}/${TextWeight}` | `display-${BasicTextSize}` | `redesign/${RedesignTextCategory}/${TextWeight}` | 'redesign/heading-18/bold' | 'eyebrow';
-      type TextStyleSheet = Record<TextVariant, TextProps$1>;
+      type TextStyleSheet = Record<TextVariant, TextStyle>;
       type CreateStylesFunction = <const S extends Record<string, TextStyle | ViewStyle | ImageStyle>>(styles: S) => () => S;
     }
     type UseTooltipFunction = (ref: RefObject<View | null>, props: UseTooltipFunctionProps) => unknown;

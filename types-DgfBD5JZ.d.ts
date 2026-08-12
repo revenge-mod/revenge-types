@@ -1,20 +1,20 @@
 import { C as index_d_exports } from "./types-BViYHFZQ.js";
 import { a as utils_d_exports$1, c as index_d_exports$1 } from "./utils-BOAl3Qoz.js";
 import { i as react_navigation_d_exports } from "./react-navigation-C0E6Cr3d.js";
-import { i as actions_d_exports } from "./actions-BuZtfXlk.js";
-import { t as app_start_performance_d_exports } from "./app-start-performance-Chua_0JD.js";
-import { r as constants_d_exports } from "./constants-CsCJRFGu.js";
-import { r as flux_d_exports } from "./flux-Cu_U_L8X.js";
+import { i as actions_d_exports } from "./actions-BRXf7OUC.js";
+import { t as app_start_performance_d_exports } from "./app-start-performance-iW_hR8-q.js";
+import { r as constants_d_exports } from "./constants-DSlatDJG.js";
+import { r as flux_d_exports } from "./flux-7wSrHPT1.js";
 import { t as import_tracker_d_exports } from "./import-tracker-lDQj2E6l.js";
-import { r as logger_d_exports } from "./logger-Dvh_Pbg7.js";
+import { r as logger_d_exports } from "./logger-CihA4Pk_.js";
 import { r as tokens_d_exports } from "./tokens-BfLlg_6O.js";
-import { n as utils_d_exports$2 } from "./utils-kr-Am5lZ.js";
-import { r as design_d_exports } from "./design-CtcZ6aqd.js";
+import { n as utils_d_exports$2 } from "./utils-bT-chLuh.js";
+import { r as design_d_exports } from "./design-BKUDdeD8.js";
 import { t as index_d_exports$2 } from "./index-ChO6q0-6.js";
-import { t as index_d_exports$3 } from "./index-B4fmcnaV.js";
+import { t as index_d_exports$3 } from "./index-CeZoDFPw.js";
 import { n as main_tabs_v2_d_exports } from "./main_tabs_v2-NT-UEEvf.js";
-import { a as index_d_exports$4 } from "./index-2HFZXDen.js";
-import { n as renderer_d_exports } from "./renderer-BX-eVNVG.js";
+import { a as index_d_exports$4 } from "./index-bM5UUQ2F.js";
+import { n as renderer_d_exports } from "./renderer-DfMTmCfy.js";
 import { s as native_d_exports } from "./native-h0PRx7r9.js";
 import { t as finders_d_exports } from "./finders-Ds6oeLsG.js";
 import { n as subscriptions_d_exports } from "./subscriptions-AguLqy9k.js";
@@ -84,15 +84,10 @@ declare namespace PluginApiDiscord {
     };
   }
 }
-declare namespace expo_d_exports {
-  export { LinearGradient };
-}
-declare let LinearGradient: any;
 //#endregion
 //#region lib/plugins/src/apis/externals.d.ts
 interface PluginApiExternals {
   Browserify: typeof browserify_d_exports;
-  Expo: typeof expo_d_exports;
   ReactNativeClipboard: typeof react_native_clipboard_d_exports;
   ReactNativeSafeAreaContext: typeof react_native_safe_area_context_d_exports;
   ReactNavigation: typeof react_navigation_d_exports;

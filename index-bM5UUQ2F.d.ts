@@ -1,5 +1,5 @@
 import { ct as noop } from "./types-BViYHFZQ.js";
-import { t as DiscordModules } from "./index-BgdmOAo5.js";
+import { t as DiscordModules } from "./index-BM2NiDvU.js";
 declare namespace index_d_exports {
   export { SettingsItem, SettingsModulesLoadedSubscription, SettingsSection, addSettingsItemToSection, isSettingsModulesLoaded, onSettingsModulesLoaded, refreshSettings, registerSettingsItem, registerSettingsItems, registerSettingsSection };
 }

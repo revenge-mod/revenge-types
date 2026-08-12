@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "./index-BgdmOAo5.js";
+import { t as DiscordModules } from "./index-BM2NiDvU.js";
 declare namespace actions_d_exports {
   export { ActionSheetActionCreators, AlertActionCreators, ToastActionCreators };
 }

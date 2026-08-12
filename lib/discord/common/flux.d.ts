@@ -1,2 +1,2 @@
-import { n as DispatcherModuleId, t as Dispatcher } from "../../../flux-Cu_U_L8X.js";
+import { n as DispatcherModuleId, t as Dispatcher } from "../../../flux-7wSrHPT1.js";
 export { Dispatcher, DispatcherModuleId };

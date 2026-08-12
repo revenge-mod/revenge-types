@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "../../index-BgdmOAo5.js";
+import { t as DiscordModules } from "../../index-BM2NiDvU.js";
 //#region lib/components/src/TableRowAssetIcon.d.ts
 declare function TableRowAssetIcon(props: TableRowAssetIconProps): import("react").JSX.Element;
 type TableRowAssetIconProps = Omit<DiscordModules.Components.TableRowIconProps, 'source'> & ({

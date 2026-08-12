@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "./index-BgdmOAo5.js";
+import { t as DiscordModules } from "./index-BM2NiDvU.js";
 //#region lib/discord/src/flux/dispatcher.d.ts
 type FluxEventDispatchPatch<T extends object = object> = (payload: DiscordModules.Flux.DispatcherPayload & T) => (DiscordModules.Flux.DispatcherPayload & T) | undefined | void;
 /**

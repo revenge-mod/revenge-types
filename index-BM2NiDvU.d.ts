@@ -1,6 +1,6 @@
-import { i as AnyFunction } from "./types-BViYHFZQ.js";
+import { a as AnyObject, i as AnyFunction } from "./types-BViYHFZQ.js";
 import { n as ReactNavigationParamList } from "./react-navigation-C0E6Cr3d.js";
-import { ComponentProps, ComponentType, FC, MemoExoticComponent, ReactElement, ReactNode, RefAttributes, RefObject } from "react";
+import { ComponentProps, ComponentType, FC, ForwardRefExoticComponent, MemoExoticComponent, ReactElement, ReactNode, RefAttributes, RefObject } from "react";
 import { StackScreenProps } from "@react-navigation/stack";
 import { ImageSourcePropType, ImageStyle, PressableProps, StyleProp, TextInputProps as TextInputProps$1, TextProps as TextProps$1, TextStyle, View, ViewProps, ViewStyle } from "react-native";
 import * as NodeBuffer from "buffer";
@@ -130,8 +130,17 @@ declare namespace DiscordModules {
     interface ActionSheetActionCreators {
       openLazy<T extends ComponentType<any>>(sheet: Promise<{
         default: T;
-      }>, key: string, props: ComponentProps<T>): void;
+      }>, key: string, props: {
+        impressionName?: string;
+        impressionProperties?: AnyObject;
+        backdropKind?: string;
+        disableHapticOnOpen?: boolean;
+        appEntryKey?: string;
+      } & ComponentProps<T>, stackingBehavior?: 'replaceTopSheet' | 'replaceAll' | 'stack'): void;
       hideActionSheet(key?: string): void;
+      hideAllActionSheets(): void;
+      setActionSheetZIndex(zIndex: number): void;
+      resetActionSheetsForAppEntryKey(appEntryKey: string): void;
     }
   }
   namespace Components {
@@ -255,9 +264,39 @@ declare namespace DiscordModules {
     }
     type FormSwitch = FC<FormSwitchProps>;
     interface ActionSheetProps {
-      children: ReactNode;
+      scrollable?: boolean;
+      startExpanded?: boolean;
+      /** Whether the bottom sheet handle is disabled. */
+      handleDisabled?: boolean;
+      showGradient?: boolean;
+      startHeight?: number;
+      maxHeight?: number;
+      containerHeight?: number;
+      contentHeight?: number;
+      backdropOpacity?: number;
+      children?: ReactNode;
+      header?: ReactNode;
+      footer?: ReactNode;
+      extraContent?: ReactNode;
+      backdropChildren?: ReactNode;
+      handleComponent?: ComponentType<any> | null;
+      backgroundComponent?: ComponentType<any>;
+      bodyStyles?: StyleProp<ViewStyle>;
+      contentStyles?: StyleProp<ViewStyle>;
+      backgroundStyles?: StyleProp<ViewStyle>;
+      borderGradient?: string[] | Record<string, any>;
+      onExpand?: () => void;
+      onDismiss?: () => void;
+      animatedIndex?: unknown;
+      keyboardShouldPersistTaps?: 'always' | 'never' | 'handled' | boolean;
+      dismissAccessibilityLabel?: string;
     }
-    type ActionSheet = FC<ActionSheetProps>;
+    type ActionSheet = ForwardRefExoticComponent<ActionSheetProps & RefAttributes<{
+      expandActionSheet(): void;
+      closeActionSheet(force?: boolean): void;
+      collapseActionSheet(): void;
+      snapToIndex(index: number): void;
+    }>>;
     interface ActionSheetCloseButtonProps extends Pick<ComponentProps<IconButton>, 'variant' | 'onPress'> {}
     type ActionSheetCloseButton = FC<ActionSheetCloseButtonProps>;
     type ActionSheetRow = TableRow;

@@ -283,6 +283,10 @@ declare const or: (<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2
 interface ComparableDependencyMap extends Array<Metro.ModuleID | number | null | undefined | ComparableDependencyMap | Filter> {
   l?: boolean;
   r?: number;
+  s?: number;
+  n?: number;
+  x?: number;
+  i?: boolean;
 }
 declare const withDependencies: WithDependencies;
 type WithDependencies = FilterGenerator<<T>(deps: ComparableDependencyMap) => Filter<{
@@ -291,6 +295,11 @@ type WithDependencies = FilterGenerator<<T>(deps: ComparableDependencyMap) => Fi
 }>> & {
   loose: typeof loose;
   relative: typeof relative;
+  skip: typeof skip;
+  last: typeof last;
+  atLeast: typeof atLeast;
+  atMost: typeof atMost;
+  includes: typeof includes;
 };
 /**
  * Make this set of comparable dependencies as loose.
@@ -302,6 +311,70 @@ type WithDependencies = FilterGenerator<<T>(deps: ComparableDependencyMap) => Fi
  * @returns The modified dependency map.
  */
 declare function loose(deps: ComparableDependencyMap): ComparableDependencyMap;
+/**
+ * Skip a number of dependencies before comparing positionally.
+ *
+ * Passing `Infinity` anchors the set to the end, matching the **last** `deps.length` dependencies.
+ * Anything before them is unconstrained.
+ *
+ * @param amount The amount of dependencies to skip from the start, or `Infinity` to anchor to the end.
+ * @param deps The dependency map to skip in. This permanently modifies the array.
+ * @returns The modified dependency map.
+ *
+ * @see {@link withDependencies.last} for the `Infinity` shorthand.
+ */
+declare function skip(amount: number, deps?: ComparableDependencyMap): ComparableDependencyMap;
+/**
+ * Match the **last** `deps.length` dependencies, leaving anything before them unconstrained.
+ *
+ * Shorthand for {@link withDependencies.skip} with `Infinity`.
+ * Prefer this over leading comparisons when a module's trailing dependencies are the stable part of its fingerprint.
+ *
+ * @param deps The dependency map to anchor to the end. This permanently modifies the array.
+ * @returns The modified dependency map.
+ *
+ * @example
+ * ```ts
+ * const { last, relative } = withDependencies
+ *
+ * // Matches modules whose last three dependencies are [Any, module ID + 1, 2]
+ * withDependencies(last([null, relative(1), 2]))
+ * ```
+ */
+declare function last(deps?: ComparableDependencyMap): ComparableDependencyMap;
+/**
+ * Require the module to have at least `count` dependencies.
+ *
+ * This implies {@link withDependencies.loose}, as an exact length check would never pass alongside a bound.
+ *
+ * @param count The minimum amount of dependencies.
+ * @param deps The dependency map to bound. This permanently modifies the array.
+ * @returns The modified dependency map.
+ */
+declare function atLeast(count: number, deps?: ComparableDependencyMap): ComparableDependencyMap;
+/**
+ * Require the module to have at most `count` dependencies.
+ *
+ * This implies {@link withDependencies.loose}, as an exact length check would never pass alongside a bound.
+ *
+ * @param count The maximum amount of dependencies.
+ * @param deps The dependency map to bound. This permanently modifies the array.
+ * @returns The modified dependency map.
+ */
+declare function atMost(count: number, deps?: ComparableDependencyMap): ComparableDependencyMap;
+/**
+ * Compare the set without caring about order or position, only that every dependency exists somewhere.
+ *
+ * Entries are matched independently, so two identical entries can both match the same dependency.
+ * Dynamic (`null`) entries are meaningless here and are ignored.
+ *
+ * **This is much more expensive than positional comparison**, as every entry is compared against every dependency.
+ * Bound it with {@link withDependencies.atLeast} or {@link withDependencies.atMost} where possible, as those are checked first.
+ *
+ * @param deps The dependency map to compare unordered. This permanently modifies the array.
+ * @returns The modified dependency map.
+ */
+declare function includes(deps: ComparableDependencyMap): ComparableDependencyMap;
 /**
  * Marks this dependency to compare relatively to the module ID being compared.
  *

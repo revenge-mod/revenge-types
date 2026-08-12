@@ -1,7 +1,7 @@
-import { I as FilterGenerator, P as Filter, q as FilterScopes } from "./types-D25zR2bB.js";
-import { t as DiscordModules } from "./index-Dhk2HO_f.js";
-import { n as onAnyFluxEventDispatched, r as onFluxEventDispatched, t as FluxEventDispatchPatch } from "./dispatcher-DWwXYNtA.js";
-import { u as WaitForModulesUnsubscribeFunction } from "./index-CfMUJbR9.js";
+import { I as FilterGenerator, P as Filter, q as FilterScopes } from "./types-BViYHFZQ.js";
+import { t as DiscordModules } from "./index-BgdmOAo5.js";
+import { n as onAnyFluxEventDispatched, r as onFluxEventDispatched, t as FluxEventDispatchPatch } from "./dispatcher-DJKbhn7C.js";
+import { u as WaitForModulesUnsubscribeFunction } from "./index-ChO6q0-6.js";
 //#region lib/discord/src/flux/stores.d.ts
 /**
  * A proxy that allows you to access Flux stores by their name, including uninitialized stores.

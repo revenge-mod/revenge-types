@@ -1,4 +1,4 @@
-import { n as Metro } from "./types-D25zR2bB.js";
+import { n as Metro } from "./types-BViYHFZQ.js";
 //#region lib/react/src/index.d.ts
 declare let ReactModuleId: Metro.ModuleID;
 declare let ReactNativeModuleId: Metro.ModuleID;

@@ -1,32 +1,32 @@
-import { B as MergeFilterInfo, C as index_d_exports, P as Filter } from "./types-D25zR2bB.js";
-import { a as utils_d_exports$1, c as index_d_exports$1 } from "./utils-BAexRwwg.js";
+import { C as index_d_exports } from "./types-BViYHFZQ.js";
+import { a as utils_d_exports$1, c as index_d_exports$1 } from "./utils-BOAl3Qoz.js";
 import { i as react_navigation_d_exports } from "./react-navigation-C0E6Cr3d.js";
-import { i as actions_d_exports } from "./actions-CURClM6j.js";
-import { t as app_start_performance_d_exports } from "./app-start-performance-DkAdlxMK.js";
-import { r as constants_d_exports } from "./constants-v_p9abQ0.js";
-import { r as flux_d_exports } from "./flux-BPISp9Lc.js";
-import { t as import_tracker_d_exports } from "./import-tracker-BTzmkPHA.js";
-import { r as logger_d_exports } from "./logger-CV5jhojA.js";
+import { i as actions_d_exports } from "./actions-BuZtfXlk.js";
+import { t as app_start_performance_d_exports } from "./app-start-performance-Chua_0JD.js";
+import { r as constants_d_exports } from "./constants-CsCJRFGu.js";
+import { r as flux_d_exports } from "./flux-Cu_U_L8X.js";
+import { t as import_tracker_d_exports } from "./import-tracker-lDQj2E6l.js";
+import { r as logger_d_exports } from "./logger-Dvh_Pbg7.js";
 import { r as tokens_d_exports } from "./tokens-BfLlg_6O.js";
-import { n as utils_d_exports$2 } from "./utils-hOAPzaWe.js";
-import { r as design_d_exports } from "./design-CXvrmMnJ.js";
-import { p as LookupModulesResult, t as index_d_exports$2 } from "./index-CfMUJbR9.js";
-import { t as index_d_exports$3 } from "./index-BEAUdMnG.js";
+import { n as utils_d_exports$2 } from "./utils-kr-Am5lZ.js";
+import { r as design_d_exports } from "./design-CtcZ6aqd.js";
+import { t as index_d_exports$2 } from "./index-ChO6q0-6.js";
+import { t as index_d_exports$3 } from "./index-B4fmcnaV.js";
 import { n as main_tabs_v2_d_exports } from "./main_tabs_v2-NT-UEEvf.js";
-import { a as index_d_exports$4 } from "./index-CKFHd5o2.js";
-import { n as renderer_d_exports } from "./renderer-Dm93qcQz.js";
+import { a as index_d_exports$4 } from "./index-2HFZXDen.js";
+import { n as renderer_d_exports } from "./renderer-BX-eVNVG.js";
 import { s as native_d_exports } from "./native-h0PRx7r9.js";
-import { t as finders_d_exports } from "./finders-SUSOGtW9.js";
-import { n as subscriptions_d_exports } from "./subscriptions-Cmha3AKD.js";
+import { t as finders_d_exports } from "./finders-Ds6oeLsG.js";
+import { n as subscriptions_d_exports } from "./subscriptions-AguLqy9k.js";
 import { t as browserify_d_exports } from "./browserify-DJ5AyWx4.js";
 import { n as react_native_clipboard_d_exports } from "./react-native-clipboard-C4-MMieZ.js";
 import { n as react_native_safe_area_context_d_exports } from "./react-native-safe-area-context-DULPjWwC.js";
 import { n as shopify_d_exports } from "./shopify-Bvy25Ylf.js";
 import { t as app_d_exports } from "./app-BWCvvJhL.js";
 import { i as fs_d_exports } from "./fs-DTkk2z5Y.js";
-import { u as index_d_exports$5 } from "./index-Mikl-LUJ.js";
+import { u as index_d_exports$5 } from "./index-CAr-R16Q.js";
 import { n as constants_d_exports$1 } from "./constants-DyYVPecI.js";
-import { s as index_d_exports$6 } from "./index-OwByrZT3.js";
+import { s as index_d_exports$6 } from "./index-B1txewhy.js";
 import { t as index_d_exports$7 } from "./index-CLY5DbuK.js";
 import { FunctionComponent } from "react";
 import * as PluginApiReact_ from "#lib/react";
@@ -84,22 +84,16 @@ declare namespace PluginApiDiscord {
     };
   }
 }
-declare namespace react_native_linear_gradient_d_exports {
+declare namespace expo_d_exports {
   export { LinearGradient };
 }
-declare const LinearGradient: LookupModulesResult<Filter<MergeFilterInfo<{
-  Result: object;
-  Scopes: [4];
-}, {
-  Result: unknown;
-  Scopes: [2, 4];
-}>>, object> | readonly [];
+declare let LinearGradient: any;
 //#endregion
 //#region lib/plugins/src/apis/externals.d.ts
 interface PluginApiExternals {
   Browserify: typeof browserify_d_exports;
+  Expo: typeof expo_d_exports;
   ReactNativeClipboard: typeof react_native_clipboard_d_exports;
-  ReactNativeLinearGradient: typeof react_native_linear_gradient_d_exports;
   ReactNativeSafeAreaContext: typeof react_native_safe_area_context_d_exports;
   ReactNavigation: typeof react_navigation_d_exports;
   Shopify: typeof shopify_d_exports;

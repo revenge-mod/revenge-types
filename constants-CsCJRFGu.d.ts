@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "./index-Dhk2HO_f.js";
+import { t as DiscordModules } from "./index-BgdmOAo5.js";
 declare namespace constants_d_exports {
   export { Constants, ConstantsModuleId };
 }

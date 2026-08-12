@@ -1,4 +1,4 @@
-import { n as Metro } from "../types-D25zR2bB.js";
+import { n as Metro } from "../types-BViYHFZQ.js";
 import { t as ReactNative } from "../types-DF_Zi2C5.js";
 import { Asset, AssetId, CustomAsset, PackagerAsset, RegisterableAsset } from "./assets/types.js";
 //#region lib/assets/src/preinit.d.ts

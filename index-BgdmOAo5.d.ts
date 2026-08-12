@@ -1,4 +1,4 @@
-import { i as AnyFunction } from "./types-D25zR2bB.js";
+import { i as AnyFunction } from "./types-BViYHFZQ.js";
 import { n as ReactNavigationParamList } from "./react-navigation-C0E6Cr3d.js";
 import { ComponentProps, ComponentType, FC, MemoExoticComponent, ReactElement, ReactNode, RefAttributes, RefObject } from "react";
 import { StackScreenProps } from "@react-navigation/stack";
@@ -157,7 +157,7 @@ declare namespace DiscordModules {
     interface BaseButtonProps extends PressableProps, RefAttributes<View> {
       disabled?: boolean;
       size?: ButtonSize;
-      variant?: 'primary' | 'secondary' | 'tertiary' | 'destructive' | 'active' | 'primary-overlay' | 'secondary-overlay';
+      variant?: 'primary' | 'secondary' | 'tertiary' | 'destructive' | 'active' | 'expressive' | 'primary-overlay' | 'secondary-overlay';
       loading?: boolean;
       grow?: boolean;
       scaleAmountInPx?: number;

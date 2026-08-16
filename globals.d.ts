@@ -1,5 +1,5 @@
 import { n as Metro } from "./types-BViYHFZQ.js";
-import { a as PluginApiExtensionsOptions, b as UnscopedPreInitPluginApi, p as PluginOptions, v as UnscopedInitPluginApi, y as UnscopedPluginApi } from "./types-DgfBD5JZ.js";
+import { a as PluginApiExtensionsOptions, b as UnscopedPreInitPluginApi, p as PluginOptions, v as UnscopedInitPluginApi, y as UnscopedPluginApi } from "./types-D_22-Fn-.js";
 import { ImageProps, ScrollViewProps, TextProps, ViewProps } from "react-native";
 //#region types/globals.d.ts
 /// REACT NATIVE COMPONENTS

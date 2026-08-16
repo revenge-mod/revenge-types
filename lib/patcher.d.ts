@@ -1,4 +1,4 @@
-import { AfterHook, BeforeHook, HookOptions, HookPriority, InsteadHook, UnknownFunction, UnpatchFunction } from "./patcher/types.js";
+import { b as UnpatchFunction, c as HookPriority, l as InsteadHook, n as AfterHook, r as BeforeHook, s as HookOptions, y as UnknownFunction } from "../types-B-daZwj8.js";
 //#region lib/patcher/src/hooks/after.d.ts
 /**
  * After hooks allow you to modify the return value of the original function, or to perform some action after the original function is called.

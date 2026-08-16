@@ -1,23 +1,2 @@
-import { n as Metro } from "../../types-BViYHFZQ.js";
-import { t as ReactNative } from "../../types-DF_Zi2C5.js";
-//#region lib/assets/src/types.d.ts
-type Asset = PackagerAsset | CustomAsset;
-type AssetId = number;
-type PackagerAsset = ReactNative.AssetsRegistry.PackagerAsset;
-interface CustomAsset extends Pick<PackagerAsset, 'name' | 'width' | 'height' | 'type' | 'id'> {
-  uri: string;
-  moduleId?: undefined;
-}
-type RegisterableAsset = Omit<CustomAsset, 'id'>;
-declare module '@revenge-mod/react/types' {
-  namespace ReactNative {
-    namespace AssetsRegistry {
-      interface PackagerAsset {
-        id: AssetId;
-        moduleId: Metro.ModuleID;
-      }
-    }
-  }
-}
-//#endregion
+import { a as RegisterableAsset, i as PackagerAsset, n as AssetId, r as CustomAsset, t as Asset } from "../../types-btt3YvNW.js";
 export { Asset, AssetId, CustomAsset, PackagerAsset, RegisterableAsset };

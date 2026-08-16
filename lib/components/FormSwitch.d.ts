@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "../../index-BM2NiDvU.js";
+import { t as DiscordModules } from "../../index-DT0BJraE.js";
 //#region lib/components/src/FormSwitch.d.ts
 /**
  * A switch component that is styled to match Discord's configuration

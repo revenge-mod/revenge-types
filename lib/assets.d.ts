@@ -1,6 +1,6 @@
 import { n as Metro } from "../types-BViYHFZQ.js";
 import { t as ReactNative } from "../types-DF_Zi2C5.js";
-import { Asset, AssetId, CustomAsset, PackagerAsset, RegisterableAsset } from "./assets/types.js";
+import { a as RegisterableAsset, i as PackagerAsset, n as AssetId, r as CustomAsset, t as Asset } from "../types-btt3YvNW.js";
 //#region lib/assets/src/preinit.d.ts
 /**
  * If you need to use this ID during `preInit`, unproxify {@link AssetsRegistry} first.

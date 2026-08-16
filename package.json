@@ -3,14 +3,21 @@
     "version": "0.1.0",
     "types": "index.d.ts",
     "files": [
-        "modules.json"
+        "modules.json",
+        "modules.hidden.json"
     ],
     "exports": {
         ".": {
             "types": "./index.d.ts"
         },
+        "./hidden": {
+            "types": "./hidden.d.ts"
+        },
         "./modules.json": {
             "default": "./modules.json"
+        },
+        "./modules.hidden.json": {
+            "default": "./modules.hidden.json"
         }
     },
     "imports": {

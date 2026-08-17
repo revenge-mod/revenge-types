@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "./index-DT0BJraE.js";
+import { t as DiscordModules } from "./index-Wkuw4SXw.js";
 declare namespace design_d_exports {
   export { Design, FormSwitch };
 }
@@ -6,6 +6,7 @@ declare let Design: Design;
 declare let FormSwitch: DiscordModules.Components.FormSwitch;
 interface Design {
   createStyles: DiscordModules.Components.Styles.CreateStylesFunction;
+  useSegmentedControlState: DiscordModules.Components.UseSegmentedControlStateFunction;
   useTooltip: DiscordModules.Components.UseTooltipFunction;
   TextStyleSheet: DiscordModules.Components.Styles.TextStyleSheet;
   ActionSheet: DiscordModules.Components.ActionSheet;
@@ -23,6 +24,8 @@ interface Design {
   ImageButton: DiscordModules.Components.ImageButton;
   LayerScope: DiscordModules.Components.LayerScope;
   NavigatorHeader: DiscordModules.Components.NavigatorHeader;
+  SegmentedControl: DiscordModules.Components.SegmentedControl;
+  SegmentedControlPages: DiscordModules.Components.SegmentedControlPages;
   Stack: DiscordModules.Components.Stack;
   Slider: DiscordModules.Components.Slider;
   TableCheckboxRow: DiscordModules.Components.TableCheckboxRow;
@@ -31,6 +34,7 @@ interface Design {
   TableRow: DiscordModules.Components.TableRow;
   TableRowGroup: DiscordModules.Components.TableRowGroup;
   TableSwitchRow: DiscordModules.Components.TableSwitchRow;
+  Tabs: DiscordModules.Components.Tabs;
   Text: DiscordModules.Components.Text;
   TextArea: DiscordModules.Components.TextArea;
   TextField: DiscordModules.Components.TextField;

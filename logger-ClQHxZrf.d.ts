@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "./index-DT0BJraE.js";
+import { t as DiscordModules } from "./index-Wkuw4SXw.js";
 declare namespace logger_d_exports {
   export { Logger, LoggerModuleId };
 }

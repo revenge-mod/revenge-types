@@ -1,6 +1,6 @@
 import { I as FilterGenerator, P as Filter, q as FilterScopes } from "./types-BViYHFZQ.js";
-import { t as DiscordModules } from "./index-DT0BJraE.js";
-import { n as onAnyFluxEventDispatched, r as onFluxEventDispatched, t as FluxEventDispatchPatch } from "./dispatcher-CSTnufrn.js";
+import { t as DiscordModules } from "./index-Wkuw4SXw.js";
+import { n as onAnyFluxEventDispatched, r as onFluxEventDispatched, t as FluxEventDispatchPatch } from "./dispatcher-BHUznKuN.js";
 import { u as WaitForModulesUnsubscribeFunction } from "./index-BXoGssRM.js";
 //#region lib/discord/src/flux/stores.d.ts
 /**

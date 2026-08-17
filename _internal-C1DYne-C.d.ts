@@ -1,5 +1,5 @@
 import { ct as noop } from "./types-BViYHFZQ.js";
-import { n as SettingsModulesLoadedSubscription, r as SettingsSection, t as SettingsItem } from "./index-JpakPZB1.js";
+import { n as SettingsModulesLoadedSubscription, r as SettingsSection, t as SettingsItem } from "./index-CIF4g0ZR.js";
 declare namespace _internal_d_exports {
   export { sConfig, sRefresher, sSections, sSubscriptions };
 }

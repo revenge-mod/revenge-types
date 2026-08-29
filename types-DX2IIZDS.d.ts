@@ -211,7 +211,9 @@ declare function createFilterGenerator<A extends any[]>(filter: (args: A, id: Me
 declare function createFilterGenerator<A extends any[]>(filter: (args: A, id: Metro.ModuleID) => boolean, keyFor: (args: A) => string, defaultScopesFor?: ((args: A) => FilterScopeValue) | FilterScopeValue): FilterGenerator<(...args: A) => Filter>;
 //#endregion
 //#region lib/modules/src/finders/filters/composite.d.ts
-type And = FilterGenerator<<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2) => Filter<MergeFilterInfo<FilterInfoOf<F1>, FilterInfoOf<F2>>>>;
+type AllOf = FilterGenerator<<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2) => Filter<MergeFilterInfo<FilterInfoOf<F1>, FilterInfoOf<F2>>>>;
+/** @deprecated Use {@link AllOf} instead */
+type And = AllOf;
 /**
  * Combines two filters into one, returning true if **every** filter matches.
  *
@@ -220,7 +222,7 @@ type And = FilterGenerator<<F1 extends FilterBase, F2 extends FilterBase>(f1: F1
  *
  * @param filters The filters to combine.
  *
- * @example With filter helpers (preferred)
+ * @example With filter helpers
  * ```ts
  * const [SomeModule] = lookupModule(
  *   withProps('x', 'name')
@@ -232,13 +234,21 @@ type And = FilterGenerator<<F1 extends FilterBase, F2 extends FilterBase>(f1: F1
  * @example
  * ```ts
  * const [SomeModule] = lookupModule(
- *   and(
- *     and(withProps('x', 'name'), withName('SomeName')),
+ *   allOf(
+ *     allOf(withProps('x', 'name'), withName('SomeName')),
  *     withDependencies([1, 485, null, 2]),
  *   ),
  * )
  * ```
  */
+declare const allOf: (<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2) => Filter<MergeFilterInfo<FilterInfoOf<F1>, FilterInfoOf<F2>>>) & {
+  keyFor(args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]): string;
+  defaultScopesFor(args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]): FilterScopeValue;
+} & {
+  keyFor: (args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]) => string;
+  defaultScopesFor: (args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]) => FilterScopeValue;
+};
+/** @deprecated Use {@link allOf} instead. */
 declare const and: (<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2) => Filter<MergeFilterInfo<FilterInfoOf<F1>, FilterInfoOf<F2>>>) & {
   keyFor(args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]): string;
   defaultScopesFor(args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]): FilterScopeValue;
@@ -246,13 +256,15 @@ declare const and: (<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F
   keyFor: (args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]) => string;
   defaultScopesFor: (args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]) => FilterScopeValue;
 };
-type Or = FilterGenerator<<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2) => Filter<UnionFilterInfo<FilterInfoOf<F1>, FilterInfoOf<F2>>>>;
+type AnyOf = FilterGenerator<<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2) => Filter<UnionFilterInfo<FilterInfoOf<F1>, FilterInfoOf<F2>>>>;
+/** @deprecated Use {@link AnyOf} instead. */
+type Or = AnyOf;
 /**
  * Combines two filters into one, returning true if **some** filters match.
  *
  * @param filters The filters to combine.
  *
- * @example With filter helpers (preferred)
+ * @example With filter helpers
  * ```ts
  * const [SomeModule] = lookupModule(
  *   withProps('x', 'name')
@@ -264,13 +276,21 @@ type Or = FilterGenerator<<F1 extends FilterBase, F2 extends FilterBase>(f1: F1,
  * @example
  * ```ts
  * const [SomeModule] = lookupModule(
- *   or(
- *     or(withProps('x', 'name'), withName('SomeName')),
+ *   anyOf(
+ *     anyOf(withProps('x', 'name'), withName('SomeName')),
  *     withDependencies([1, 485, null, 2]),
  *   ),
  * )
  * ```
  */
+declare const anyOf: (<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2) => Filter<UnionFilterInfo<FilterInfoOf<F1>, FilterInfoOf<F2>>>) & {
+  keyFor(args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]): string;
+  defaultScopesFor(args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]): FilterScopeValue;
+} & {
+  keyFor: (args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]) => string;
+  defaultScopesFor: (args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]) => FilterScopeValue;
+};
+/** @deprecated Use {@link anyOf} instead. */
 declare const or: (<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2) => Filter<UnionFilterInfo<FilterInfoOf<F1>, FilterInfoOf<F2>>>) & {
   keyFor(args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]): string;
   defaultScopesFor(args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]): FilterScopeValue;
@@ -280,37 +300,49 @@ declare const or: (<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2: F2
 };
 //#endregion
 //#region lib/modules/src/finders/filters/dynamic.d.ts
-interface ComparableDependencyMap extends Array<Metro.ModuleID | number | null | undefined | ComparableDependencyMap | Filter> {
-  l?: boolean;
+/** @internal This structure is not stable, and should only be referenced internally. */
+interface ComparableDependencyMap extends Array<Metro.ModuleID | number | null | undefined | ComparableDependencyMap |
+/** @deprecated Resolve the module ID with `lookupModule` and pass the ID. */
+Filter> {
+  p?: boolean;
   r?: number;
   s?: number;
   n?: number;
   x?: number;
-  i?: boolean;
+  u?: boolean;
+  o?: boolean;
 }
 declare const withDependencies: WithDependencies;
 type WithDependencies = FilterGenerator<<T>(deps: ComparableDependencyMap) => Filter<{
   Result: T;
   Scopes: [typeof FilterScopes.Uninitialized, typeof FilterScopes.Initialized];
 }>> & {
-  loose: typeof loose;
+  partial: typeof partial;
   relative: typeof relative;
   skip: typeof skip;
   last: typeof last;
   atLeast: typeof atLeast;
   atMost: typeof atMost;
-  includes: typeof includes;
+  unordered: typeof unordered;
+  ordered: typeof ordered;
+  /** @deprecated Use {@link withDependencies.partial} instead. */
+  loose: typeof partial;
+  /** @deprecated Use {@link withDependencies.unordered} instead. */
+  includes: typeof unordered;
 };
 /**
- * Make this set of comparable dependencies as loose.
+ * Compare the set without requiring it to reach the end of the dependency map.
  *
- * Making a dependency loose skips the exact length check, but the order of the set dependencies still matters.
- * If you mark an index as dynamic, the same index must also be present in the other map during comparison to pass.
+ * On its own this matches the **leading** dependencies. Can be used with {@link withDependencies.skip}.
  *
- * @param deps The dependency map to make loose. This permanently modifies the array.
+ * Order still matters. If you mark an index as dynamic, the same index must also be present during comparison to pass.
+ *
+ * @param deps The dependency map to compare partially. This permanently modifies the array.
  * @returns The modified dependency map.
+ *
+ * @see {@link withDependencies.last} for the trailing counterpart.
  */
-declare function loose(deps: ComparableDependencyMap): ComparableDependencyMap;
+declare function partial(deps: ComparableDependencyMap): ComparableDependencyMap;
 /**
  * Skip a number of dependencies before comparing positionally.
  *
@@ -345,7 +377,7 @@ declare function last(deps?: ComparableDependencyMap): ComparableDependencyMap;
 /**
  * Require the module to have at least `count` dependencies.
  *
- * This implies {@link withDependencies.loose}, as an exact length check would never pass alongside a bound.
+ * This implies {@link withDependencies.partial}, as an exact length check would never pass alongside a bound.
  *
  * @param count The minimum amount of dependencies.
  * @param deps The dependency map to bound. This permanently modifies the array.
@@ -355,13 +387,37 @@ declare function atLeast(count: number, deps?: ComparableDependencyMap): Compara
 /**
  * Require the module to have at most `count` dependencies.
  *
- * This implies {@link withDependencies.loose}, as an exact length check would never pass alongside a bound.
+ * This implies {@link withDependencies.partial}, as an exact length check would never pass alongside a bound.
  *
  * @param count The maximum amount of dependencies.
  * @param deps The dependency map to bound. This permanently modifies the array.
  * @returns The modified dependency map.
  */
 declare function atMost(count: number, deps?: ComparableDependencyMap): ComparableDependencyMap;
+/**
+ * Compare the set in order, allowing any number of unrelated dependencies between the entries.
+ *
+ * Entries must appear in the given order. Gaps before, between and after them are unconstrained.
+ * Dynamic (`null`) entries consume one dependency slot.
+ *
+ * Each entry takes the earliest dependency satisfying it. That is exact for subsequences,
+ * so entries matching overlapping dependencies never cause a false negative.
+ *
+ * @param deps The dependency map to compare as a subsequence. This permanently modifies the array.
+ * @returns The modified dependency map.
+ *
+ * @see {@link withDependencies.unordered} to drop the order requirement too.
+ *
+ * @example
+ * ```ts
+ * const { ordered, relative } = withDependencies
+ *
+ * // Matches modules depending on module ID 4, then its own next module, in that order,
+ * // with any number of other dependencies around them
+ * withDependencies(ordered([4, relative(1)]))
+ * ```
+ */
+declare function ordered(deps: ComparableDependencyMap): ComparableDependencyMap;
 /**
  * Compare the set without caring about order or position, only that every dependency exists somewhere.
  *
@@ -373,17 +429,21 @@ declare function atMost(count: number, deps?: ComparableDependencyMap): Comparab
  *
  * @param deps The dependency map to compare unordered. This permanently modifies the array.
  * @returns The modified dependency map.
+ *
+ * @see {@link withDependencies.ordered} to keep the order requirement.
  */
-declare function includes(deps: ComparableDependencyMap): ComparableDependencyMap;
+declare function unordered(deps: ComparableDependencyMap): ComparableDependencyMap;
 /**
  * Marks this dependency to compare relatively to the module ID being compared.
  *
  * @param magnitude The relative magnitude to use when comparing module IDs. Positive values mean the dependency's module ID is greater than the module being compared, negative values mean it's less.
  * @param root Marks this dependency to compare relatively to the root (returning) module ID being compared. Useful for nested comparisons where you want to compare by the root module ID instead of the parent's module ID of the nested dependency.
+ *
+ * @see {@link relative.within} to accept a range of magnitudes.
  */
 declare function relative(magnitude: Metro.ModuleID, root?: boolean): number;
 declare namespace index_d_exports {
-  export { And, ComparableDependencyMap, DefaultFilterInfo, Filter, FilterBase, FilterGenerator, FilterHelpers, FilterInfo, FilterInfoOf, FilterResult, FilterScope, FilterScopeValue, FilterScopes, MergeFilterInfo, Or, UnionFilterInfo, WithName, WithProps, WithSingleProp, WithoutProps, and, createFilterGenerator, or, withDependencies, withName, withProps, withSingleProp, withoutProps };
+  export { AllOf, And, AnyOf, ComparableDependencyMap, DefaultFilterInfo, Filter, FilterBase, FilterGenerator, FilterHelpers, FilterInfo, FilterInfoOf, FilterResult, FilterScope, FilterScopeValue, FilterScopes, MergeFilterInfo, Or, UnionFilterInfo, WithName, WithProps, WithSingleProp, WithoutProps, allOf, and, anyOf, createFilterGenerator, or, withDependencies, withName, withProps, withSingleProp, withoutProps };
 }
 type FilterRequiringExports<T> = Filter<{
   Result: T;
@@ -601,4 +661,4 @@ type MaybeDefaultExportMatched<T> = T | {
   default: T;
 };
 //#endregion
-export { SearchTree as $, And as A, MergeFilterInfo as B, index_d_exports as C, withoutProps as D, withSingleProp as E, FilterBase as F, FilterScope as G, createFilterGenerator as H, FilterGenerator as I, findInReactFiber as J, FilterScopeValue as K, FilterHelpers as L, and as M, or as N, ComparableDependencyMap as O, Filter as P, SearchFilter as Q, FilterInfoOf as R, WithoutProps as S, withProps as T, DefaultFilterInfo as U, UnionFilterInfo as V, FilterInfo as W, useReRender as X, useIsFirstRender as Y, FindInTreeOptions as Z, lookupGeneratedIconComponent as _, AnyObject as a, mergeDeep as at, WithProps as b, If as c, noop as ct, LogicalOr as d, findInTree as et, Not as f, WithGeneratedIconComponent as g, PreInitPluginApiUtils as h, AnyFunction as i, isObject as it, Or as j, withDependencies as k, KeyWithType as l, PluginApiUtils as m, Metro as n, defineLazyProperties as nt, DeepPartial as o, asap as ot, Nullish as p, FilterScopes as q, RevengeMetro as r, defineLazyProperty as rt, ExtractPredicate as s, debounce as st, MaybeDefaultExportMatched as t, cloneDeep as tt, LogicalAnd as u, withGeneratedIconComponent as v, withName as w, WithSingleProp as x, WithName as y, FilterResult as z };
+export { useIsFirstRender as $, AllOf as A, FilterGenerator as B, index_d_exports as C, withoutProps as D, withSingleProp as E, and as F, UnionFilterInfo as G, FilterInfoOf as H, anyOf as I, FilterInfo as J, createFilterGenerator as K, or as L, AnyOf as M, Or as N, ComparableDependencyMap as O, allOf as P, findInReactFiber as Q, Filter as R, WithoutProps as S, withProps as T, FilterResult as U, FilterHelpers as V, MergeFilterInfo as W, FilterScopeValue as X, FilterScope as Y, FilterScopes as Z, lookupGeneratedIconComponent as _, AnyObject as a, cloneDeep as at, WithProps as b, If as c, isObject as ct, LogicalOr as d, debounce as dt, useReRender as et, Not as f, noop as ft, WithGeneratedIconComponent as g, PreInitPluginApiUtils as h, AnyFunction as i, findInTree as it, And as j, withDependencies as k, KeyWithType as l, mergeDeep as lt, PluginApiUtils as m, Metro as n, SearchFilter as nt, DeepPartial as o, defineLazyProperties as ot, Nullish as p, DefaultFilterInfo as q, RevengeMetro as r, SearchTree as rt, ExtractPredicate as s, defineLazyProperty as st, MaybeDefaultExportMatched as t, FindInTreeOptions as tt, LogicalAnd as u, asap as ut, withGeneratedIconComponent as v, withName as w, WithSingleProp as x, WithName as y, FilterBase as z };

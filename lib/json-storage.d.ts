@@ -1,4 +1,4 @@
-import { a as AnyObject, c as If, o as DeepPartial } from "../types-BViYHFZQ.js";
+import { a as AnyObject, c as If, o as DeepPartial } from "../types-DX2IIZDS.js";
 declare namespace index_d_exports {
   export { JsonStorage, JsonStorageOptions, JsonStorageSubscription, JsonStorageUpdateMode, UseJsonStorageFilter, getJsonStorage, pluginStoragePathFor };
 }

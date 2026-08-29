@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "./index-Wkuw4SXw.js";
+import { t as DiscordModules } from "./index-BX123Pl-.js";
 declare namespace repositories_d_exports {
   export { DownloadProgressEvent, InstallPlan, InstallPlanAction, Repo, RepoConfigEntry, RepoPluginListing, RepoStateEvent, RepoUpdate, installFromRepo, listAllUpdates, listRepoPlugins, listRepos, listUpdates, planInstall, refreshAllRepos, refreshRepo, registerRepositoryEvents, repoEvents, setRepos, updateAllPlugins };
 }

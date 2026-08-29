@@ -1,2 +1,2 @@
-import { t as SettingListRenderer } from "../../../../renderer-DO-FJgkz.js";
+import { t as SettingListRenderer } from "../../../../renderer-BAtIcMpa.js";
 export { SettingListRenderer };

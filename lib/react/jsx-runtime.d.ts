@@ -1,2 +1,2 @@
-import { a as afterJSX, c as insteadJSX, i as InsteadJSXCallback, n as AnyJSXFactoryFunction, o as beforeJSX, r as BeforeJSXCallback, t as AfterJSXCallback } from "../../index-B1txewhy.js";
+import { a as afterJSX, c as insteadJSX, i as InsteadJSXCallback, n as AnyJSXFactoryFunction, o as beforeJSX, r as BeforeJSXCallback, t as AfterJSXCallback } from "../../index-8Sa8_n48.js";
 export { AfterJSXCallback, AnyJSXFactoryFunction, BeforeJSXCallback, InsteadJSXCallback, afterJSX, beforeJSX, insteadJSX };

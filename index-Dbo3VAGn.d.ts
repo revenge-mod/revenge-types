@@ -35,6 +35,7 @@ type WithStoreName = FilterGenerator<<T>(name: string) => Filter<{
  * A with-exports filter that matches a Flux store by its name.
  */
 declare const withStoreName: WithStoreName;
+/** see TODO at {@link withFluxStoreDeps} */
 declare namespace index_d_exports {
   export { FluxEventDispatchPatch, Stores, WithStore, WithStoreName, getStore, onAnyFluxEventDispatched, onFluxEventDispatched, withStore, withStoreName };
 }

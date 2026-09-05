@@ -8,9 +8,9 @@ import { r as import_tracker_d_exports } from "./import-tracker-Cc-RZh1D.js";
 import { v as FilterResultFlag, y as _internal_d_exports$7 } from "./index-fMQLQF_v.js";
 import { t as _internal_d_exports$8 } from "./_internal-CLhBoSUh.js";
 import { i as Callable, l as InsteadHook, n as AfterHook, o as FiniteDomain, r as BeforeHook, t as AbstractNewable, y as UnknownFunction } from "./types-B-daZwj8.js";
-import { b as UnscopedPreInitPluginApi, i as PluginApiDecorator, v as UnscopedInitPluginApi, y as UnscopedPluginApi } from "./types-BZ_mtoxa.js";
+import { b as UnscopedPreInitPluginApi, i as PluginApiDecorator, v as UnscopedInitPluginApi, y as UnscopedPluginApi } from "./types-Bzf0QcQZ.js";
 import { i as InsteadJSXCallback, r as BeforeJSXCallback, t as AfterJSXCallback } from "./index-CDwFOEVd.js";
-import { J as external_plugins_d_exports, S as index_d_exports$1, a as PluginError, i as InternalPluginMeta, t as AnyPlugin } from "./index-C4G6sjXK.js";
+import { J as external_plugins_d_exports, S as index_d_exports$1, a as PluginError, i as InternalPluginMeta, t as AnyPlugin } from "./index-Bdm_zS1Y.js";
 import { y as repositories_d_exports } from "./repositories-BvrQpaDa.js";
 declare namespace _internal_d_exports$5 {
   export { FunctionProxyState, HookNode, InsteadHookNode, PatchedFunctionProxyState, createPatchedFunctionProxy, patchedFunctionProxyHandler, patchedFunctionProxyStates, unproxy };

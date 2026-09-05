@@ -337,6 +337,8 @@ type WithDependencies = FilterGenerator<<T>(deps: ComparableDependencyMap) => Fi
  *
  * Order still matters. If you mark an index as dynamic, the same index must also be present during comparison to pass.
  *
+ * Time complexity: `O(m)`.
+ *
  * @param deps The dependency map to compare partially. This permanently modifies the array.
  * @returns The modified dependency map.
  *
@@ -348,6 +350,8 @@ declare function partial(deps: ComparableDependencyMap): ComparableDependencyMap
  *
  * Passing `Infinity` anchors the set to the end, matching the **last** `deps.length` dependencies.
  * Anything before them is unconstrained.
+ *
+ * Time complexity: `O(m)`.
  *
  * @param amount The amount of dependencies to skip from the start, or `Infinity` to anchor to the end.
  * @param deps The dependency map to skip in. This permanently modifies the array.
@@ -361,6 +365,8 @@ declare function skip(amount: number, deps?: ComparableDependencyMap): Comparabl
  *
  * Shorthand for {@link withDependencies.skip} with `Infinity`.
  * Prefer this over leading comparisons when a module's trailing dependencies are the stable part of its fingerprint.
+ *
+ * Time complexity: `O(m)`.
  *
  * @param deps The dependency map to anchor to the end. This permanently modifies the array.
  * @returns The modified dependency map.
@@ -379,6 +385,8 @@ declare function last(deps?: ComparableDependencyMap): ComparableDependencyMap;
  *
  * This implies {@link withDependencies.partial}, as an exact length check would never pass alongside a bound.
  *
+ * Time complexity: `O(1)`.
+ *
  * @param count The minimum amount of dependencies.
  * @param deps The dependency map to bound. This permanently modifies the array.
  * @returns The modified dependency map.
@@ -388,6 +396,8 @@ declare function atLeast(count: number, deps?: ComparableDependencyMap): Compara
  * Require the module to have at most `count` dependencies.
  *
  * This implies {@link withDependencies.partial}, as an exact length check would never pass alongside a bound.
+ *
+ * Time complexity: `O(1)`.
  *
  * @param count The maximum amount of dependencies.
  * @param deps The dependency map to bound. This permanently modifies the array.
@@ -402,6 +412,8 @@ declare function atMost(count: number, deps?: ComparableDependencyMap): Comparab
  *
  * Each entry takes the earliest dependency satisfying it. That is exact for subsequences,
  * so entries matching overlapping dependencies never cause a false negative.
+ *
+ * Time complexity: `O(n + m)`. The cursor only moves forward. Each dependency is visited at most once.
  *
  * @param deps The dependency map to compare as a subsequence. This permanently modifies the array.
  * @returns The modified dependency map.
@@ -427,6 +439,8 @@ declare function ordered(deps: ComparableDependencyMap): ComparableDependencyMap
  * **This is much more expensive than positional comparison**, as every entry is compared against every dependency.
  * Bound it with {@link withDependencies.atLeast} or {@link withDependencies.atMost} where possible, as those are checked first.
  *
+ * Time complexity: `O(n * m)`.
+ *
  * @param deps The dependency map to compare unordered. This permanently modifies the array.
  * @returns The modified dependency map.
  *
@@ -435,6 +449,8 @@ declare function ordered(deps: ComparableDependencyMap): ComparableDependencyMap
 declare function unordered(deps: ComparableDependencyMap): ComparableDependencyMap;
 /**
  * Marks this dependency to compare relatively to the module ID being compared.
+ *
+ * Time complexity: `O(1)`.
  *
  * @param magnitude The relative magnitude to use when comparing module IDs. Positive values mean the dependency's module ID is greater than the module being compared, negative values mean it's less.
  * @param root Marks this dependency to compare relatively to the root (returning) module ID being compared. Useful for nested comparisons where you want to compare by the root module ID instead of the parent's module ID of the nested dependency.

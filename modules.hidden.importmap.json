@@ -1,0 +1,6 @@
+{
+    "@revenge-mod/components/_": "revenge.hidden.components",
+    "@revenge-mod/discord/_/modules/settings": "revenge.hidden.discord.settings",
+    "@revenge-mod/plugins/_": "revenge.hidden.plugins.internal",
+    "@revenge-mod/plugins/_/repositories": "revenge.hidden.plugins.repositories"
+}

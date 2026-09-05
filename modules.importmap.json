@@ -1,0 +1,62 @@
+{
+    "@revenge-mod/assets": "revenge.assets",
+    "@revenge-mod/components": "revenge.components",
+    "@revenge-mod/components/FormSwitch": {
+        "global": "revenge.components.FormSwitch",
+        "interop": "default"
+    },
+    "@revenge-mod/components/Page": {
+        "global": "revenge.components.Page",
+        "interop": "default"
+    },
+    "@revenge-mod/components/SearchInput": {
+        "global": "revenge.components.SearchInput",
+        "interop": "default"
+    },
+    "@revenge-mod/components/TableRowAssetIcon": {
+        "global": "revenge.components.TableRowAssetIcon",
+        "interop": "default"
+    },
+    "@revenge-mod/discord/actions": "revenge.discord.actions",
+    "@revenge-mod/discord/common/app-start-performance": "revenge.discord.common.appStartPerformance",
+    "@revenge-mod/discord/common/constants": "revenge.discord.common.constants",
+    "@revenge-mod/discord/common/flux": "revenge.discord.common.flux",
+    "@revenge-mod/discord/common/import-tracker": "revenge.discord.common.importTracker",
+    "@revenge-mod/discord/common/logger": "revenge.discord.common.logger",
+    "@revenge-mod/discord/common/tokens": "revenge.discord.common.tokens",
+    "@revenge-mod/discord/common/utils": "revenge.discord.common.utils",
+    "@revenge-mod/discord/design": "revenge.discord.design",
+    "@revenge-mod/discord/flux": "revenge.discord.flux",
+    "@revenge-mod/discord/modules/main_tabs_v2": "revenge.discord.modules.mainTabsV2",
+    "@revenge-mod/discord/modules/settings": "revenge.discord.modules.settings",
+    "@revenge-mod/discord/modules/settings/renderer": "revenge.discord.modules.settings.renderer",
+    "@revenge-mod/discord/native": "revenge.discord.native",
+    "@revenge-mod/discord/utils/modules/finders": "revenge.discord.utils.modules.finders",
+    "@revenge-mod/discord/utils/modules/metro/subscriptions": "revenge.discord.utils.modules.metro.subscriptions",
+    "@revenge-mod/externals/browserify": "revenge.externals.Browserify",
+    "@revenge-mod/externals/react-native-clipboard": "revenge.externals.ReactNativeClipboard",
+    "@revenge-mod/externals/react-native-safe-area-context": "revenge.externals.ReactNativeSafeAreaContext",
+    "@revenge-mod/externals/react-navigation": "revenge.externals.ReactNavigation",
+    "@revenge-mod/externals/shopify": "revenge.externals.Shopify",
+    "@revenge-mod/json-storage": "revenge.jsonStorage",
+    "@revenge-mod/modules/finders": "revenge.modules.finders",
+    "@revenge-mod/modules/finders/filters": "revenge.modules.finders.filters",
+    "@revenge-mod/modules/metro": "revenge.modules.metro",
+    "@revenge-mod/modules/native": "revenge.modules.native",
+    "@revenge-mod/modules/native/app": "revenge.modules.native.app",
+    "@revenge-mod/modules/native/fs": "revenge.modules.native.fs",
+    "@revenge-mod/patcher": "revenge.patcher",
+    "@revenge-mod/plugins/constants": "revenge.plugins.constants",
+    "@revenge-mod/plugins/utils": "revenge.plugins.utils",
+    "@revenge-mod/react": "revenge.react",
+    "@revenge-mod/react/jsx-runtime": "revenge.react.jsxRuntime",
+    "@revenge-mod/react/native": "revenge.react.native",
+    "@revenge-mod/utils/callback": "revenge.utils.callback",
+    "@revenge-mod/utils/discord": "revenge.utils.discord",
+    "@revenge-mod/utils/error": "revenge.utils.error",
+    "@revenge-mod/utils/object": "revenge.utils.object",
+    "@revenge-mod/utils/promise": "revenge.utils.promise",
+    "@revenge-mod/utils/proxy": "revenge.utils.proxy",
+    "@revenge-mod/utils/react": "revenge.utils.react",
+    "@revenge-mod/utils/tree": "revenge.utils.tree"
+}

@@ -3,8 +3,8 @@
     "version": "0.1.0",
     "types": "index.d.ts",
     "files": [
-        "modules.json",
-        "modules.hidden.json"
+        "modules.importmap.json",
+        "modules.hidden.importmap.json"
     ],
     "exports": {
         ".": {
@@ -13,11 +13,11 @@
         "./hidden": {
             "types": "./hidden.d.ts"
         },
-        "./modules.json": {
-            "default": "./modules.json"
+        "./modules.importmap.json": {
+            "default": "./modules.importmap.json"
         },
-        "./modules.hidden.json": {
-            "default": "./modules.hidden.json"
+        "./modules.hidden.importmap.json": {
+            "default": "./modules.hidden.importmap.json"
         }
     },
     "imports": {

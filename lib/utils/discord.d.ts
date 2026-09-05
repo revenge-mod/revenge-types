@@ -1,2 +1,2 @@
-import { _ as lookupGeneratedIconComponent, g as WithGeneratedIconComponent, v as withGeneratedIconComponent } from "../../types-DX2IIZDS.js";
+import { _ as lookupGeneratedIconComponent, g as WithGeneratedIconComponent, v as withGeneratedIconComponent } from "../../types-BIlurZpa.js";
 export { WithGeneratedIconComponent, lookupGeneratedIconComponent, withGeneratedIconComponent };

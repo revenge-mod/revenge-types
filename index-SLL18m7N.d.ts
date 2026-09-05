@@ -1,5 +1,5 @@
-import { ft as noop } from "./types-DX2IIZDS.js";
-import { t as DiscordModules } from "./index-BX123Pl-.js";
+import { ft as noop } from "./types-BIlurZpa.js";
+import { t as DiscordModules } from "./index-0-Zmdp5b.js";
 declare namespace index_d_exports {
   export { SettingsItem, SettingsModulesLoadedSubscription, SettingsSection, addSettingsItemToSection, isSettingsModulesLoaded, onSettingsModulesLoaded, refreshSettings, registerSettingsItem, registerSettingsItems, registerSettingsSection };
 }

@@ -1,5 +1,5 @@
-import { t as DiscordModules } from "./index-BX123Pl-.js";
-import { t as FluxEventDispatchPatch } from "./dispatcher-ykG_UsVl.js";
+import { t as DiscordModules } from "./index-0-Zmdp5b.js";
+import { t as FluxEventDispatchPatch } from "./dispatcher-BI4a1WDn.js";
 declare namespace flux_d_exports {
   export { fPatches, fPatchesAll };
 }

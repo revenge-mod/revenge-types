@@ -1,9 +1,9 @@
-import { a as AnyObject } from "../../types-DX2IIZDS.js";
-import { JsonStorage, JsonStorageOptions, t as index_d_exports } from "../json-storage.js";
+import { a as AnyObject } from "../../types-BIlurZpa.js";
+import { JsonStorage, JsonStorageOptions } from "../json-storage.js";
 //#region lib/json-storage/src/types.d.ts
 declare module '@revenge-mod/plugins/types' {
   interface UnscopedPreInitPluginApi {
-    jsonStorage: typeof index_d_exports;
+    jsonStorage: typeof import('#lib/json-storage');
   }
   interface PluginApiExtensionsOptions {
     jsonStorage?: AnyObject;

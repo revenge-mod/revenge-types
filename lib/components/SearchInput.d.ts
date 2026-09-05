@@ -1,4 +1,4 @@
-import { t as DiscordModules } from "../../index-BX123Pl-.js";
+import { t as DiscordModules } from "../../index-0-Zmdp5b.js";
 //#region lib/components/src/SearchInput.d.ts
 declare function SearchInput(props: DiscordModules.Components.TextInputProps): import("react").JSX.Element;
 //#endregion

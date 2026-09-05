@@ -1,5 +1,5 @@
-import { t as DiscordModules } from "./index-BX123Pl-.js";
-import { a as PluginApiExtensionsOptions, b as UnscopedPreInitPluginApi, f as PluginManifest, m as PluginOptionsFactory, n as Plugin, p as PluginOptions, s as PluginCleanup, v as UnscopedInitPluginApi, y as UnscopedPluginApi } from "./types-DVTm2ywY.js";
+import { t as DiscordModules } from "./index-0-Zmdp5b.js";
+import { a as PluginApiExtensionsOptions, b as UnscopedPreInitPluginApi, f as PluginManifest, m as PluginOptionsFactory, n as Plugin, p as PluginOptions, s as PluginCleanup, v as UnscopedInitPluginApi, y as UnscopedPluginApi } from "./types-BZ_mtoxa.js";
 declare namespace external_plugins_d_exports {
   export { confirmInstall, registerExternalPlugin, registerExternalPlugins, resyncPluginSources, uninstallExternalPlugin };
 }

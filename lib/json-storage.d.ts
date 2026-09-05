@@ -1,7 +1,5 @@
-import { a as AnyObject, c as If, o as DeepPartial } from "../types-DX2IIZDS.js";
-declare namespace index_d_exports {
-  export { JsonStorage, JsonStorageOptions, JsonStorageSubscription, JsonStorageUpdateMode, UseJsonStorageFilter, getJsonStorage, pluginStoragePathFor };
-}
+import { a as AnyObject, c as If, o as DeepPartial } from "../types-BIlurZpa.js";
+//#region lib/json-storage/src/index.d.ts
 /**
  * Get the storage path for a plugin's JSON storage document.
  *
@@ -129,4 +127,4 @@ interface JsonStorage<T extends AnyObject> {
   delete(): Promise<boolean>;
 }
 //#endregion
-export { JsonStorage, JsonStorageOptions, JsonStorageSubscription, JsonStorageUpdateMode, UseJsonStorageFilter, getJsonStorage, pluginStoragePathFor, index_d_exports as t };
+export { JsonStorage, JsonStorageOptions, JsonStorageSubscription, JsonStorageUpdateMode, UseJsonStorageFilter, getJsonStorage, pluginStoragePathFor };

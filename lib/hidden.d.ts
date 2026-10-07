@@ -1,5 +1,5 @@
-import { a as HiddenApiModulesMetro, i as HiddenApiModules, n as HiddenApiAssets, o as HiddenApiPlugins, r as HiddenApiDiscord, s as HiddenApiReact, t as HiddenApi } from "../types-BEbuJ1V2.js";
+import { a as HiddenApiModulesMetro, i as HiddenApiModules, n as HiddenApiAssets, o as HiddenApiPlugins, r as HiddenApiDiscord, s as HiddenApiReact, t as HiddenApi } from "../types-kL1vvxlI.js";
 //#region lib/hidden/src/index.d.ts
-declare const hiddenApi: HiddenApi;
+export declare const hiddenApi: HiddenApi;
 //#endregion
-export { HiddenApi, HiddenApiAssets, HiddenApiDiscord, HiddenApiModules, HiddenApiModulesMetro, HiddenApiPlugins, HiddenApiReact, hiddenApi };
+export { HiddenApi, HiddenApiAssets, HiddenApiDiscord, HiddenApiModules, HiddenApiModulesMetro, HiddenApiPlugins, HiddenApiReact };

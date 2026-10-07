@@ -1,8 +1,7 @@
-import { t as DiscordModules } from "../../index-0-Zmdp5b.js";
+import { U as DiscordModules } from "../../types-0FvueiN7.js";
 //#region lib/components/src/FormSwitch.d.ts
 /**
  * A switch component that is styled to match Discord's configuration
  */
-declare function FormSwitch(props: DiscordModules.Components.FormSwitchProps): import("react").JSX.Element;
+export default function FormSwitch(props: DiscordModules.Components.FormSwitchProps): import("react").JSX.Element;
 //#endregion
-export { FormSwitch as default };

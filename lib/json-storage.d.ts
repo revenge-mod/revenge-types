@@ -1,4 +1,4 @@
-import { a as AnyObject, c as If, o as DeepPartial } from "../types-BIlurZpa.js";
+import { a as AnyObject, c as If, o as DeepPartial } from "../types-0FvueiN7.js";
 //#region lib/json-storage/src/index.d.ts
 /**
  * Get the storage path for a plugin's JSON storage document.
@@ -6,9 +6,9 @@ import { a as AnyObject, c as If, o as DeepPartial } from "../types-BIlurZpa.js"
  * @param id The plugin ID.
  * @param file The file name (or relative path) of the storage document inside the plugin's storage directory.
  */
-declare const pluginStoragePathFor: (id: string, file?: string) => string;
-type JsonStorageSubscription<T extends AnyObject = AnyObject> = (update: DeepPartial<T>, mode: (typeof JsonStorageUpdateMode)[keyof typeof JsonStorageUpdateMode]) => void;
-declare const JsonStorageUpdateMode: {
+export declare const pluginStoragePathFor: (id: string, file?: string) => string;
+export type JsonStorageSubscription<T extends AnyObject = AnyObject> = (update: DeepPartial<T>, mode: (typeof JsonStorageUpdateMode)[keyof typeof JsonStorageUpdateMode]) => void;
+export declare const JsonStorageUpdateMode: {
   /**
    * The update will be merged into the existing storage.
    */
@@ -33,7 +33,7 @@ declare const JsonStorageUpdateMode: {
  *
  * @param options Options for the storage.
  */
-declare function JsonStorage<T extends AnyObject>(this: JsonStorage<T>, path: string, options?: JsonStorageOptions<T>): void;
+export declare function JsonStorage<T extends AnyObject>(this: JsonStorage<T>, path: string, options?: JsonStorageOptions<T>): void;
 /**
  * Get a JSON storage object for a given path.
  *
@@ -42,8 +42,8 @@ declare function JsonStorage<T extends AnyObject>(this: JsonStorage<T>, path: st
  *   Use `files/...` for app data or `cache/...` for cache on Android.
  * - Absolute paths are used as-is.
  */
-declare function getJsonStorage<T extends AnyObject = AnyObject>(path: string, options?: JsonStorageOptions<T>): JsonStorage<T>;
-interface JsonStorageOptions<T extends AnyObject = AnyObject> {
+export declare function getJsonStorage<T extends AnyObject = AnyObject>(path: string, options?: JsonStorageOptions<T>): JsonStorage<T>;
+export interface JsonStorageOptions<T extends AnyObject = AnyObject> {
   /**
    * The default value to use for the storage. This will also be used for cache.
    *
@@ -57,8 +57,8 @@ interface JsonStorageOptions<T extends AnyObject = AnyObject> {
    */
   load?: boolean;
 }
-type UseJsonStorageFilter<T extends AnyObject = AnyObject> = (...params: Parameters<JsonStorageSubscription<T>>) => any;
-interface JsonStorage<T extends AnyObject> {
+export type UseJsonStorageFilter<T extends AnyObject = AnyObject> = (...params: Parameters<JsonStorageSubscription<T>>) => any;
+export interface JsonStorage<T extends AnyObject> {
   /**
    * Whether the storage has been loaded. If the storage is not loaded, `storage.cache` may be `undefined`.
    * If you have `options.default` set, you can use this property to check if `storage.cache` is the default value or not.
@@ -127,4 +127,3 @@ interface JsonStorage<T extends AnyObject> {
   delete(): Promise<boolean>;
 }
 //#endregion
-export { JsonStorage, JsonStorageOptions, JsonStorageSubscription, JsonStorageUpdateMode, UseJsonStorageFilter, getJsonStorage, pluginStoragePathFor };

@@ -1,2 +1,2 @@
-import { x as formatVersion } from "../../types-Bzf0QcQZ.js";
-export { formatVersion };
+import { C as getPluginContributorName, S as formatVersion, w as parsePluginContributor, x as PluginContributor } from "../../types-CGx43xpi.js";
+export { PluginContributor, formatVersion, getPluginContributorName, parsePluginContributor };

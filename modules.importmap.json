@@ -34,6 +34,7 @@
     "@revenge-mod/discord/utils/modules/finders": "revenge.discord.utils.modules.finders",
     "@revenge-mod/discord/utils/modules/metro/subscriptions": "revenge.discord.utils.modules.metro.subscriptions",
     "@revenge-mod/externals/browserify": "revenge.externals.Browserify",
+    "@revenge-mod/externals/gorhom": "revenge.externals.Gorhom",
     "@revenge-mod/externals/react-native-clipboard": "revenge.externals.ReactNativeClipboard",
     "@revenge-mod/externals/react-native-safe-area-context": "revenge.externals.ReactNativeSafeAreaContext",
     "@revenge-mod/externals/react-navigation": "revenge.externals.ReactNavigation",

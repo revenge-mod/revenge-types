@@ -1,2 +1,2 @@
-import { r as styles, t as PageSpacing } from "../../_internal-Ar2hi-jb.js";
+import { r as styles, t as PageSpacing } from "../../_internal-Dpk0X74L.js";
 export { PageSpacing, styles };

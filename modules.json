@@ -25,6 +25,7 @@
     "discord/utils/modules/finders",
     "discord/utils/modules/metro/subscriptions",
     "externals/browserify",
+    "externals/gorhom",
     "externals/react-native-clipboard",
     "externals/react-native-safe-area-context",
     "externals/react-navigation",

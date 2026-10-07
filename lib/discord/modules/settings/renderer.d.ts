@@ -1,2 +1,2 @@
-import { t as SettingListRenderer } from "../../../../renderer-B9SXXtHF.js";
+import { t as SettingListRenderer } from "../../../../renderer-DPZOMe8z.js";
 export { SettingListRenderer };

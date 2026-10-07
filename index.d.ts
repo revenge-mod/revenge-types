@@ -25,6 +25,7 @@
 /// <reference path="./lib/discord/utils/modules/finders.d.ts" />
 /// <reference path="./lib/discord/utils/modules/metro/subscriptions.d.ts" />
 /// <reference path="./lib/externals/browserify.d.ts" />
+/// <reference path="./lib/externals/gorhom.d.ts" />
 /// <reference path="./lib/externals/react-native-clipboard.d.ts" />
 /// <reference path="./lib/externals/react-native-safe-area-context.d.ts" />
 /// <reference path="./lib/externals/react-navigation.d.ts" />
@@ -163,6 +164,10 @@ declare module '@revenge-mod/discord/utils/modules/metro/subscriptions' {
 
 declare module '@revenge-mod/externals/browserify' {
     export * from '#lib/externals/browserify'
+}
+
+declare module '@revenge-mod/externals/gorhom' {
+    export * from '#lib/externals/gorhom'
 }
 
 declare module '@revenge-mod/externals/react-native-clipboard' {

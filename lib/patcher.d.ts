@@ -29,7 +29,7 @@ import { b as UnpatchFunction, c as HookPriority, l as InsteadHook, n as AfterHo
  *
  * @returns A function to unpatch.
  */
-declare function after<Parent extends Record<Key, UnknownFunction>, Key extends keyof Parent>(parent: Parent, key: Key, hook: AfterHook<Parent[Key]>, options?: HookOptions): UnpatchFunction;
+export declare function after<Parent extends Record<Key, UnknownFunction>, Key extends keyof Parent>(parent: Parent, key: Key, hook: AfterHook<Parent[Key]>, options?: HookOptions): UnpatchFunction;
 //#endregion
 //#region lib/patcher/src/hooks/before.d.ts
 /**
@@ -61,7 +61,7 @@ declare function after<Parent extends Record<Key, UnknownFunction>, Key extends 
  *
  * @returns A function to unpatch.
  */
-declare function before<Parent extends Record<Key, UnknownFunction>, Key extends keyof Parent>(parent: Parent, key: Key, hook: BeforeHook<Parent[Key]>, options?: HookOptions): UnpatchFunction;
+export declare function before<Parent extends Record<Key, UnknownFunction>, Key extends keyof Parent>(parent: Parent, key: Key, hook: BeforeHook<Parent[Key]>, options?: HookOptions): UnpatchFunction;
 //#endregion
 //#region lib/patcher/src/hooks/instead.d.ts
 /**
@@ -102,6 +102,6 @@ declare function before<Parent extends Record<Key, UnknownFunction>, Key extends
  *
  * @return A function to unpatch.
  */
-declare function instead<Parent extends Record<Key, UnknownFunction>, Key extends keyof Parent>(parent: Parent, key: Key, hook: InsteadHook<Parent[Key]>, options?: HookOptions): UnpatchFunction;
+export declare function instead<Parent extends Record<Key, UnknownFunction>, Key extends keyof Parent>(parent: Parent, key: Key, hook: InsteadHook<Parent[Key]>, options?: HookOptions): UnpatchFunction;
 //#endregion
-export { type HookOptions, HookPriority, after, before, instead };
+export { type HookOptions, HookPriority };

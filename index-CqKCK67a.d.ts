@@ -1,5 +1,5 @@
 import { U as DiscordModules } from "./types-sIZbooUK.js";
-import { a as PluginApiExtensionsOptions, b as UnscopedPreInitPluginApi, f as PluginManifest, g as PluginVersion, m as PluginOptionsFactory, n as Plugin, p as PluginOptions, s as PluginCleanup, v as UnscopedInitPluginApi, y as UnscopedPluginApi } from "./types-BEM1XZoM.js";
+import { a as PluginApiExtensionsOptions, b as UnscopedPreInitPluginApi, f as PluginManifest, g as PluginVersion, m as PluginOptionsFactory, n as Plugin, p as PluginOptions, s as PluginCleanup, v as UnscopedInitPluginApi, y as UnscopedPluginApi } from "./types-DDTQsUvB.js";
 import { i as MethodResult, n as MethodArgs, r as MethodName } from "./index-D7lA39l_.js";
 declare namespace index_d_exports$1 {
   export { guardIndexInitialized, pUnscopedApi, spreadDescriptors };

@@ -1,9 +1,10 @@
-import { U as DiscordModules } from "./types-0FvueiN7.js";
+import { U as DiscordModules } from "./types-sIZbooUK.js";
 declare namespace design_d_exports {
-  export { Design, FormSwitch };
+  export { Design, FormRadio, FormSwitch };
 }
 declare let Design: Design;
 declare let FormSwitch: DiscordModules.Components.FormSwitch;
+declare let FormRadio: DiscordModules.Components.FormRadio;
 interface Design {
   createStyles: DiscordModules.Components.Styles.CreateStylesFunction;
   useSegmentedControlState: DiscordModules.Components.UseSegmentedControlStateFunction;
@@ -43,4 +44,4 @@ interface Design {
   TextInput: DiscordModules.Components.TextInput;
 }
 //#endregion
-export { FormSwitch as n, design_d_exports as r, Design as t };
+export { design_d_exports as i, FormRadio as n, FormSwitch as r, Design as t };

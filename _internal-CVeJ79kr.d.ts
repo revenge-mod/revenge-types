@@ -1,5 +1,5 @@
-import { lt as noop } from "./types-0FvueiN7.js";
-import { n as SettingsModulesLoadedSubscription, r as SettingsSection, t as SettingsItem } from "./index-CvtTYOs-.js";
+import { lt as noop } from "./types-sIZbooUK.js";
+import { n as SettingsModulesLoadedSubscription, r as SettingsSection, t as SettingsItem } from "./index-C1rk_Isz.js";
 declare namespace _internal_d_exports {
   export { sConfig, sRefresher, sSections, sSubscriptions };
 }

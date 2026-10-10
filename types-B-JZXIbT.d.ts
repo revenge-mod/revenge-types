@@ -1,17 +1,18 @@
-import { P as Filter, i as AnyFunction, n as Metro, r as RevengeMetro } from "./types-0FvueiN7.js";
-import { o as ModuleFirstRequiredCallback, s as ModuleInitializedCallback } from "./utils-zdSU70HX.js";
+import { P as Filter, i as AnyFunction, n as Metro, r as RevengeMetro } from "./types-sIZbooUK.js";
+import { o as ModuleFirstRequiredCallback, s as ModuleInitializedCallback } from "./utils-BdKMJ0xf.js";
 import { n as RunApplicationCallback } from "./types-DF_Zi2C5.js";
-import { r as CustomAsset, t as Asset } from "./types-CjNzGxrB.js";
+import { i as CustomAsset, r as AssetOverride, t as Asset } from "./types-DwTYCMa5.js";
+import { t as AssetRegisteredCallback } from "./index-o1tLBCLC.js";
 import { n as _internal_d_exports$6 } from "./_internal-Dpk0X74L.js";
-import { r as flux_d_exports } from "./app-start-performance-CdCFfRM4.js";
-import { r as import_tracker_d_exports } from "./import-tracker-p_wqIoIb.js";
-import { v as FilterResultFlag, y as _internal_d_exports$7 } from "./index-diiyxe_y.js";
-import { t as _internal_d_exports$8 } from "./_internal-BLP8LC0e.js";
+import { r as flux_d_exports } from "./app-start-performance-D4-l91af.js";
+import { r as import_tracker_d_exports } from "./import-tracker-C-8tfWNA.js";
+import { v as FilterResultFlag, y as _internal_d_exports$7 } from "./index-Ds9zosQh.js";
+import { t as _internal_d_exports$8 } from "./_internal-CVeJ79kr.js";
 import { i as Callable, l as InsteadHook, n as AfterHook, o as FiniteDomain, r as BeforeHook, t as AbstractNewable, y as UnknownFunction } from "./types-B-daZwj8.js";
-import { i as PluginApiDecorator } from "./types-CGx43xpi.js";
-import { i as InsteadJSXCallback, r as BeforeJSXCallback, t as AfterJSXCallback } from "./index-krmmyJwI.js";
-import { Ft as index_d_exports, J as external_plugins_d_exports, St as PluginSystemErrorPayload, lt as AnyPlugin, pt as InternalPluginMeta, t as index_d_exports$1 } from "./index-C2QDtkHT.js";
-import { C as repositories_d_exports } from "./repositories-gT52SWuA.js";
+import { i as PluginApiDecorator } from "./types-BEM1XZoM.js";
+import { i as InsteadJSXCallback, r as BeforeJSXCallback, t as AfterJSXCallback } from "./index-Cnkm54bB.js";
+import { It as index_d_exports, J as external_plugins_d_exports, St as PluginSystemErrorPayload, lt as AnyPlugin, pt as InternalPluginMeta, t as index_d_exports$1 } from "./index-DUtrCDBx.js";
+import { C as repositories_d_exports } from "./repositories-ndjo6jm8.js";
 declare namespace _internal_d_exports$5 {
   export { FunctionProxyState, HookNode, InsteadHookNode, PatchedFunctionProxyState, createPatchedFunctionProxy, patchedFunctionProxyHandler, patchedFunctionProxyStates, unproxy };
 }
@@ -271,10 +272,21 @@ declare module '@revenge-mod/modules/native' {
   }
 }
 declare namespace _internal_d_exports {
-  export { aCustoms, aOverrides };
+  export { aCustoms, aNameOverrides, aOverrides, aSubs, aSubsAny, executeAssetSubscriptions, resolveAssetOverride };
 }
 declare const aCustoms: Set<CustomAsset>;
-declare const aOverrides: WeakMap<Asset, Asset>;
+declare const aOverrides: WeakMap<Asset, AssetOverride>;
+declare const aNameOverrides: Map<string, AssetOverride>;
+declare const aSubsAny: Set<AssetRegisteredCallback>;
+declare const aSubs: Map<string, Set<AssetRegisteredCallback>>;
+declare function executeAssetSubscriptions(asset: Asset): void;
+/** Resolves an override, keeping the original dimensions when the override has none. */
+declare function resolveAssetOverride(asset: Asset): {
+  uri: string;
+  width: number | undefined;
+  height: number | undefined;
+  scale: number;
+} | undefined;
 //#endregion
 //#region lib/hidden/src/types.d.ts
 /**

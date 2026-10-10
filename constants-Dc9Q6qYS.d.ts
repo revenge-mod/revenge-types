@@ -1,4 +1,4 @@
-import { U as DiscordModules } from "./types-0FvueiN7.js";
+import { U as DiscordModules } from "./types-sIZbooUK.js";
 declare namespace constants_d_exports {
   export { Constants, ConstantsModuleId };
 }

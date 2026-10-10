@@ -1,5 +1,5 @@
-import { U as DiscordModules } from "./types-0FvueiN7.js";
-import { _t as PluginSource } from "./index-C2QDtkHT.js";
+import { U as DiscordModules } from "./types-sIZbooUK.js";
+import { _t as PluginSource } from "./index-DUtrCDBx.js";
 declare namespace repositories_d_exports {
   export { DownloadProgressEvent, InstallPlan, InstallPlanAction, PlanOptions, PlanTarget, PluginUpdate, Repo, RepoConfigEntry, RepoPluginListing, RepoStateEvent, ResolveIssue, VersionCandidate, breakingIssuesOf, installFromRepo, listRepoPlugins, listRepos, listUpdates, planInstall, refreshAllRepos, refreshRepo, registerRepositoryEvents, repoEvents, selectSafeUpdates, setPluginHeld, setRepos, updateAllPlugins, updatePlugins };
 }

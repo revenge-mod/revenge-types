@@ -1,4 +1,4 @@
-import { i as AnyFunction } from "./types-0FvueiN7.js";
+import { i as AnyFunction } from "./types-sIZbooUK.js";
 declare namespace index_d_exports {
   export { BridgeInfo, MethodArgs, MethodName, MethodResult, NativeMethods, callNativeMethod, callNativeMethodSync, getBridgeInfo, getNativeModule, registerJSMethod };
 }

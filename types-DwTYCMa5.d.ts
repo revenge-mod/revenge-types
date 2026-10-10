@@ -1,4 +1,4 @@
-import { n as Metro } from "./types-0FvueiN7.js";
+import { n as Metro } from "./types-sIZbooUK.js";
 import { t as ReactNative } from "./types-DF_Zi2C5.js";
 //#region lib/assets/src/types.d.ts
 type Asset = PackagerAsset | CustomAsset;
@@ -9,6 +9,14 @@ interface CustomAsset extends Pick<PackagerAsset, 'name' | 'width' | 'height' | 
   moduleId?: undefined;
 }
 type RegisterableAsset = Omit<CustomAsset, 'id'>;
+/** Source used in place of an asset. Dimensions default to the original asset's. */
+interface AssetOverride {
+  /** Any URI React Native can load, eg. `file://`, `https://` or `data:`. */
+  uri: string;
+  width?: number;
+  height?: number;
+  scale?: number;
+}
 declare module '@revenge-mod/react/types' {
   namespace ReactNative {
     namespace AssetsRegistry {
@@ -20,4 +28,4 @@ declare module '@revenge-mod/react/types' {
   }
 }
 //#endregion
-export { RegisterableAsset as a, PackagerAsset as i, AssetId as n, CustomAsset as r, Asset as t };
+export { PackagerAsset as a, CustomAsset as i, AssetId as n, RegisterableAsset as o, AssetOverride as r, Asset as t };

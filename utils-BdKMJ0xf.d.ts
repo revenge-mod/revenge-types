@@ -1,4 +1,4 @@
-import { n as Metro } from "./types-0FvueiN7.js";
+import { n as Metro } from "./types-sIZbooUK.js";
 declare namespace index_d_exports {
   export { ModuleFirstRequiredCallback, ModuleInitializedCallback, onAnyModuleFirstRequired, onAnyModuleInitialized, onModuleFirstRequired, onModuleInitialized };
 }

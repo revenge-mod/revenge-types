@@ -255,6 +255,28 @@ declare namespace DiscordModules {
       useAlertStore(): unknown;
     }
     interface ToastActionCreators {
+      open(key: string, options: {
+        text: string;
+        icon?: Components.BaseIconImage | {
+          alt: string;
+          src: string;
+          type: 'emoji';
+        } | {
+          alt: string;
+          src: string;
+          type: 'avatar';
+        } | {
+          name: string;
+          src: string | null;
+          type: 'guild';
+        };
+        /** Discord semantic color token. */
+        iconColor?: any;
+        /** Discord semantic color token. */
+        secondaryIconColor?: any;
+        variant?: 'default' | 'success' | 'critical';
+      }): void;
+      /** @deprecated Use the other overload on 350204+ */
       open(options: {
         key: string;
         content?: string;
@@ -410,6 +432,10 @@ declare namespace DiscordModules {
       disabled?: boolean;
     }
     type FormSwitch = FC<FormSwitchProps>;
+    interface FormRadioProps {
+      selected: boolean | null;
+    }
+    type FormRadio = FC<FormRadioProps>;
     interface CheckboxProps {
       checked: boolean;
       description?: string;
@@ -815,6 +841,15 @@ declare namespace DiscordModules {
       type Listener<T, K extends keyof T> = T[K] extends any[] ? (...args: T[K]) => void : never;
     }
     class TypedEventEmitter<T extends Record<string, any[]> = Record<string, any[]>> {
+      emitter: TypedEventEmitter<T> & {
+        setMaxListeners(n: number): void;
+        getMaxListeners(): number;
+        prependListener<K extends keyof T>(event: K, listener: TypedEventEmitter.Listener<T, K>): TypedEventEmitter<T>;
+        prependOnceListener<K extends keyof T>(event: K, listener: TypedEventEmitter.Listener<T, K>): TypedEventEmitter<T>;
+        listeners<K extends keyof T>(event: K): TypedEventEmitter.Listener<T, K>[];
+        rawListeners<K extends keyof T>(event: K): TypedEventEmitter.Listener<T, K>[];
+        eventNames(): (keyof T)[];
+      };
       addListener<K extends keyof T>(event: K, listener: TypedEventEmitter.Listener<T, K>): this;
       on<K extends keyof T>(event: K, listener: TypedEventEmitter.Listener<T, K>): this;
       once<K extends keyof T>(event: K, listener: TypedEventEmitter.Listener<T, K>): this;

@@ -1,4 +1,4 @@
-import { a as HiddenApiModulesMetro, i as HiddenApiModules, n as HiddenApiAssets, o as HiddenApiPlugins, r as HiddenApiDiscord, s as HiddenApiReact, t as HiddenApi } from "../types-kL1vvxlI.js";
+import { a as HiddenApiModulesMetro, i as HiddenApiModules, n as HiddenApiAssets, o as HiddenApiPlugins, r as HiddenApiDiscord, s as HiddenApiReact, t as HiddenApi } from "../types-B-JZXIbT.js";
 //#region lib/hidden/src/index.d.ts
 export declare const hiddenApi: HiddenApi;
 //#endregion

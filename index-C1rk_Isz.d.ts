@@ -1,4 +1,4 @@
-import { U as DiscordModules, lt as noop } from "./types-0FvueiN7.js";
+import { U as DiscordModules, lt as noop } from "./types-sIZbooUK.js";
 declare namespace index_d_exports {
   export { SettingsItem, SettingsModulesLoadedSubscription, SettingsSection, addSettingsItemToSection, isSettingsModulesLoaded, onSettingsModulesLoaded, refreshSettings, registerSettingsItem, registerSettingsItems, registerSettingsSection };
 }

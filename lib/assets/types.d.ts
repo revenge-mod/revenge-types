@@ -1,2 +1,2 @@
-import { a as RegisterableAsset, i as PackagerAsset, n as AssetId, r as CustomAsset, t as Asset } from "../../types-CjNzGxrB.js";
-export { Asset, AssetId, CustomAsset, PackagerAsset, RegisterableAsset };
+import { a as PackagerAsset, i as CustomAsset, n as AssetId, o as RegisterableAsset, r as AssetOverride, t as Asset } from "../../types-DwTYCMa5.js";
+export { Asset, AssetId, AssetOverride, CustomAsset, PackagerAsset, RegisterableAsset };

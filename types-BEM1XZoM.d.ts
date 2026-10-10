@@ -1,34 +1,34 @@
-import { C as index_d_exports } from "./types-0FvueiN7.js";
+import { C as index_d_exports } from "./types-sIZbooUK.js";
 import { i as react_navigation_d_exports } from "./react-navigation-C0E6Cr3d.js";
-import { a as utils_d_exports$1, c as index_d_exports$1 } from "./utils-zdSU70HX.js";
+import { a as utils_d_exports$1, c as index_d_exports$1 } from "./utils-BdKMJ0xf.js";
 import { t as PluginApiComponents } from "./types-DqvBgXRd.js";
-import { i as actions_d_exports } from "./actions-BI8ZX8xc.js";
-import { t as app_start_performance_d_exports } from "./app-start-performance-CdCFfRM4.js";
-import { r as constants_d_exports } from "./constants-DlYPJvoy.js";
-import { r as flux_d_exports } from "./flux-ChTV76S7.js";
-import { t as import_tracker_d_exports } from "./import-tracker-DuukIA5U.js";
-import { r as logger_d_exports } from "./logger-DgueAd_B.js";
+import { i as actions_d_exports } from "./actions-BBHDhlDf.js";
+import { t as app_start_performance_d_exports } from "./app-start-performance-D4-l91af.js";
+import { r as constants_d_exports } from "./constants-Dc9Q6qYS.js";
+import { r as flux_d_exports } from "./flux-ywFuEBaE.js";
+import { t as import_tracker_d_exports } from "./import-tracker-CoLLGJgi.js";
+import { r as logger_d_exports } from "./logger-DUf6g3v4.js";
 import { r as tokens_d_exports } from "./tokens-BfLlg_6O.js";
-import { n as utils_d_exports$2 } from "./utils-BX3-bCvH.js";
-import { r as design_d_exports } from "./design-BiM9qQQ3.js";
-import { t as index_d_exports$2 } from "./index-diiyxe_y.js";
-import { t as index_d_exports$3 } from "./index-oblQ7vym.js";
+import { n as utils_d_exports$2 } from "./utils-CXBwkciI.js";
+import { i as design_d_exports } from "./design-DQkBy9uZ.js";
+import { t as index_d_exports$2 } from "./index-Ds9zosQh.js";
+import { t as index_d_exports$3 } from "./index-BDUOJICx.js";
 import { n as main_tabs_v2_d_exports } from "./main_tabs_v2-NT-UEEvf.js";
-import { a as index_d_exports$4 } from "./index-CvtTYOs-.js";
-import { n as renderer_d_exports } from "./renderer-DPZOMe8z.js";
+import { a as index_d_exports$4 } from "./index-C1rk_Isz.js";
+import { n as renderer_d_exports } from "./renderer-BGJGyRan.js";
 import { s as native_d_exports } from "./native-h0PRx7r9.js";
-import { t as finders_d_exports } from "./finders-sag8UHc6.js";
-import { n as subscriptions_d_exports } from "./subscriptions-CBv_JEtg.js";
+import { t as finders_d_exports } from "./finders-CLDvHM1-.js";
+import { n as subscriptions_d_exports } from "./subscriptions-BoqGdFVs.js";
 import { t as browserify_d_exports } from "./browserify-DJ5AyWx4.js";
 import { n as gorhom_d_exports } from "./gorhom-KnPvpOlY.js";
 import { n as react_native_clipboard_d_exports } from "./react-native-clipboard-C-xVcySM.js";
 import { n as react_native_safe_area_context_d_exports } from "./react-native-safe-area-context-DULPjWwC.js";
 import { n as shopify_d_exports } from "./shopify-Bvy25Ylf.js";
-import { u as index_d_exports$5 } from "./index-3k1mJB4V.js";
+import { u as index_d_exports$5 } from "./index-D7lA39l_.js";
 import { t as app_d_exports } from "./app-BWCvvJhL.js";
 import { i as fs_d_exports } from "./fs-DTkk2z5Y.js";
-import { t as constants_d_exports$1 } from "./constants-DgKGCPDR.js";
-import { s as index_d_exports$6 } from "./index-krmmyJwI.js";
+import { t as constants_d_exports$1 } from "./constants-BVbhDsQs.js";
+import { s as index_d_exports$6 } from "./index-Cnkm54bB.js";
 import { t as index_d_exports$7 } from "./index-CLY5DbuK.js";
 import { FunctionComponent } from "react";
 import * as PluginApiReact_ from "#lib/react";
@@ -117,22 +117,27 @@ type PluginApiModulesFinders = typeof index_d_exports$2 & {
   filters: typeof index_d_exports;
 };
 declare namespace utils_d_exports {
-  export { PluginContributor, formatVersion, getPluginContributorName, parsePluginContributor };
+  export { PluginContributor, PluginContributorLink, formatVersion, getPluginContributorName, parsePluginContributor };
 }
 /** Formats plugin version for display. */
 declare const formatVersion: (version: PluginVersion) => string;
-/** Contributor parsed from a `Name <DISCORD_ID> (LINK)` string. */
+/** Contributor parsed from a `Name <DISCORD_ID> (LINK "LABEL")` string. */
 interface PluginContributor {
   name: string;
   /** Discord user IDs. */
   ids: string[];
   /** Links with `https:`, `http:` or `mailto:` scheme. */
-  links: string[];
+  links: PluginContributorLink[];
+}
+/** Contributor link with an optional display label. */
+interface PluginContributorLink {
+  url: string;
+  label?: string;
 }
 /**
  * Parses a contributor string, such as {@link PluginManifest.author}.
  *
- * Format: `Name <DISCORD_ID_1> <DISCORD_ID_N> (LINK_1) (LINK_N)`.
+ * Format: `Name <DISCORD_ID_1> <DISCORD_ID_N> (LINK_1 "LABEL") (LINK_N)`.
  * Discord IDs and links are optional and repeatable, with IDs first.
  *
  * @returns The parsed contributor, or `null` when the string does not follow the format.
@@ -250,7 +255,7 @@ interface PluginManifest {
   /** Display name. */
   name: string;
   /**
-   * Author information, as `Name <DISCORD_ID> (LINK)`.
+   * Author information, as `Name <DISCORD_ID> (LINK "LABEL")`.
    * Discord IDs and links are optional and repeatable.
    *
    * Use {@link getPluginContributorName} and {@link parsePluginContributor} to extract the name, IDs, and links.
@@ -338,9 +343,10 @@ declare module '@revenge-mod/modules/native' {
   interface NativeMethods {
     'revenge.plugins.getConstants': [[], {
       storageRootPath: string;
+      distRootPath: string;
       defaultsOnlySlot: string;
     }];
   }
 }
 //#endregion
-export { getPluginContributorName as C, formatVersion as S, PreInitPluginApi as _, PluginApiExtensionsOptions as a, UnscopedPreInitPluginApi as b, PluginCleanupApi as c, PluginLifecycles as d, PluginManifest as f, PluginVersion as g, PluginSettingsComponent as h, PluginApiDecorator as i, PluginDecorateApi as l, PluginOptionsFactory as m, Plugin as n, PluginApiInLifecycleMap as o, PluginOptions as p, PluginApi as r, PluginCleanup as s, InitPluginApi as t, PluginDependencyConstraint as u, UnscopedInitPluginApi as v, parsePluginContributor as w, PluginContributor as x, UnscopedPluginApi as y };
+export { formatVersion as C, PluginContributorLink as S, parsePluginContributor as T, PreInitPluginApi as _, PluginApiExtensionsOptions as a, UnscopedPreInitPluginApi as b, PluginCleanupApi as c, PluginLifecycles as d, PluginManifest as f, PluginVersion as g, PluginSettingsComponent as h, PluginApiDecorator as i, PluginDecorateApi as l, PluginOptionsFactory as m, Plugin as n, PluginApiInLifecycleMap as o, PluginOptions as p, PluginApi as r, PluginCleanup as s, InitPluginApi as t, PluginDependencyConstraint as u, UnscopedInitPluginApi as v, getPluginContributorName as w, PluginContributor as x, UnscopedPluginApi as y };

@@ -1,2 +1,2 @@
-import { C as getPluginContributorName, S as formatVersion, w as parsePluginContributor, x as PluginContributor } from "../../types-CGx43xpi.js";
-export { PluginContributor, formatVersion, getPluginContributorName, parsePluginContributor };
+import { C as formatVersion, S as PluginContributorLink, T as parsePluginContributor, w as getPluginContributorName, x as PluginContributor } from "../../types-BEM1XZoM.js";
+export { PluginContributor, PluginContributorLink, formatVersion, getPluginContributorName, parsePluginContributor };

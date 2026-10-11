@@ -27,6 +27,7 @@
 /// <reference path="./lib/externals/browserify.d.ts" />
 /// <reference path="./lib/externals/gorhom.d.ts" />
 /// <reference path="./lib/externals/react-native-clipboard.d.ts" />
+/// <reference path="./lib/externals/react-native-community.d.ts" />
 /// <reference path="./lib/externals/react-native-safe-area-context.d.ts" />
 /// <reference path="./lib/externals/react-navigation.d.ts" />
 /// <reference path="./lib/externals/shopify.d.ts" />
@@ -172,6 +173,10 @@ declare module '@revenge-mod/externals/gorhom' {
 
 declare module '@revenge-mod/externals/react-native-clipboard' {
     export * from '#lib/externals/react-native-clipboard'
+}
+
+declare module '@revenge-mod/externals/react-native-community' {
+    export * from '#lib/externals/react-native-community'
 }
 
 declare module '@revenge-mod/externals/react-native-safe-area-context' {

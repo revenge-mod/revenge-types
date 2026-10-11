@@ -27,6 +27,7 @@
     "externals/browserify",
     "externals/gorhom",
     "externals/react-native-clipboard",
+    "externals/react-native-community",
     "externals/react-native-safe-area-context",
     "externals/react-navigation",
     "externals/shopify",

@@ -22,6 +22,7 @@ import { n as subscriptions_d_exports } from "./subscriptions-BoqGdFVs.js";
 import { t as browserify_d_exports } from "./browserify-DJ5AyWx4.js";
 import { n as gorhom_d_exports } from "./gorhom-KnPvpOlY.js";
 import { n as react_native_clipboard_d_exports } from "./react-native-clipboard-C-xVcySM.js";
+import { n as react_native_community_d_exports } from "./react-native-community-D0jSJ8Ha.js";
 import { n as react_native_safe_area_context_d_exports } from "./react-native-safe-area-context-DULPjWwC.js";
 import { n as shopify_d_exports } from "./shopify-Bvy25Ylf.js";
 import { u as index_d_exports$5 } from "./index-D7lA39l_.js";
@@ -86,10 +87,6 @@ declare namespace PluginApiDiscord {
     };
   }
 }
-declare namespace react_native_community_d_exports {
-  export { NetInfo };
-}
-declare let NetInfo: typeof import('@react-native-community/netinfo');
 //#endregion
 //#region lib/plugins/src/apis/externals.d.ts
 interface PluginApiExternals {

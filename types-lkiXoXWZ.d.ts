@@ -25,6 +25,7 @@ import { n as react_native_clipboard_d_exports } from "./react-native-clipboard-
 import { n as react_native_community_d_exports } from "./react-native-community-D0jSJ8Ha.js";
 import { n as react_native_safe_area_context_d_exports } from "./react-native-safe-area-context-DULPjWwC.js";
 import { n as shopify_d_exports } from "./shopify-Bvy25Ylf.js";
+import { n as zustand_d_exports } from "./zustand-BaXQPaW1.js";
 import { u as index_d_exports$5 } from "./index-D7lA39l_.js";
 import { t as app_d_exports } from "./app-BWCvvJhL.js";
 import { i as fs_d_exports } from "./fs-DTkk2z5Y.js";
@@ -97,6 +98,7 @@ interface PluginApiExternals {
   ReactNativeSafeAreaContext: typeof react_native_safe_area_context_d_exports;
   ReactNavigation: typeof react_navigation_d_exports;
   Shopify: typeof shopify_d_exports;
+  Zustand: typeof zustand_d_exports;
 }
 //#endregion
 //#region lib/plugins/src/apis/modules.d.ts

@@ -49,7 +49,8 @@
         "react-native": "0.86.0",
         "react-native-gesture-handler": "2.29.0",
         "react-native-reanimated": "4.6.0",
-        "react-native-safe-area-context": "^5.10.0"
+        "react-native-safe-area-context": "^5.10.0",
+        "zustand": "^5.0.15"
     },
     "peerDependenciesMeta": {
         "@gorhom/bottom-sheet": {
@@ -77,6 +78,9 @@
             "optional": true
         },
         "react-native-safe-area-context": {
+            "optional": true
+        },
+        "zustand": {
             "optional": true
         }
     }

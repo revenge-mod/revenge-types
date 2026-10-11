@@ -31,6 +31,7 @@
     "externals/react-native-safe-area-context",
     "externals/react-navigation",
     "externals/shopify",
+    "externals/zustand",
     "json-storage",
     "json-storage/types",
     "modules/finders",

@@ -31,6 +31,7 @@
 /// <reference path="./lib/externals/react-native-safe-area-context.d.ts" />
 /// <reference path="./lib/externals/react-navigation.d.ts" />
 /// <reference path="./lib/externals/shopify.d.ts" />
+/// <reference path="./lib/externals/zustand.d.ts" />
 /// <reference path="./lib/json-storage.d.ts" />
 /// <reference path="./lib/json-storage/types.d.ts" />
 /// <reference path="./lib/modules/finders.d.ts" />
@@ -189,6 +190,10 @@ declare module '@revenge-mod/externals/react-navigation' {
 
 declare module '@revenge-mod/externals/shopify' {
     export * from '#lib/externals/shopify'
+}
+
+declare module '@revenge-mod/externals/zustand' {
+    export * from '#lib/externals/zustand'
 }
 
 declare module '@revenge-mod/json-storage' {

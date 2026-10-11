@@ -9,10 +9,10 @@ import { r as import_tracker_d_exports } from "./import-tracker-C-8tfWNA.js";
 import { v as FilterResultFlag, y as _internal_d_exports$7 } from "./index-Ds9zosQh.js";
 import { t as _internal_d_exports$8 } from "./_internal-CVeJ79kr.js";
 import { i as Callable, l as InsteadHook, n as AfterHook, o as FiniteDomain, r as BeforeHook, t as AbstractNewable, y as UnknownFunction } from "./types-B-daZwj8.js";
-import { i as PluginApiDecorator } from "./types-DvEG81B9.js";
+import { i as PluginApiDecorator } from "./types-lkiXoXWZ.js";
 import { i as InsteadJSXCallback, r as BeforeJSXCallback, t as AfterJSXCallback } from "./index-Cnkm54bB.js";
-import { It as index_d_exports, J as external_plugins_d_exports, St as PluginSystemErrorPayload, lt as AnyPlugin, pt as InternalPluginMeta, t as index_d_exports$1 } from "./index-DZTK5316.js";
-import { C as repositories_d_exports } from "./repositories-C8hJupl6.js";
+import { It as index_d_exports, J as external_plugins_d_exports, St as PluginSystemErrorPayload, lt as AnyPlugin, pt as InternalPluginMeta, t as index_d_exports$1 } from "./index-BLQbuRa-.js";
+import { C as repositories_d_exports } from "./repositories-GxvXm7y6.js";
 declare namespace _internal_d_exports$5 {
   export { FunctionProxyState, HookNode, InsteadHookNode, PatchedFunctionProxyState, createPatchedFunctionProxy, patchedFunctionProxyHandler, patchedFunctionProxyStates, unproxy };
 }

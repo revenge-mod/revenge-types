@@ -40,6 +40,7 @@
     "@revenge-mod/externals/react-native-safe-area-context": "revenge.externals.ReactNativeSafeAreaContext",
     "@revenge-mod/externals/react-navigation": "revenge.externals.ReactNavigation",
     "@revenge-mod/externals/shopify": "revenge.externals.Shopify",
+    "@revenge-mod/externals/zustand": "revenge.externals.Zustand",
     "@revenge-mod/json-storage": "revenge.jsonStorage",
     "@revenge-mod/modules/finders": "revenge.modules.finders",
     "@revenge-mod/modules/finders/filters": "revenge.modules.finders.filters",

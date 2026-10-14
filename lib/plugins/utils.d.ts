@@ -1,2 +1,2 @@
-import { C as formatVersion, S as PluginContributorLink, T as parsePluginContributor, w as getPluginContributorName, x as PluginContributor } from "../../types-lkiXoXWZ.js";
+import { C as formatVersion, S as PluginContributorLink, T as parsePluginContributor, w as getPluginContributorName, x as PluginContributor } from "../../types-Bl3IFtVP.js";
 export { PluginContributor, PluginContributorLink, formatVersion, getPluginContributorName, parsePluginContributor };

@@ -1,4 +1,4 @@
-import { U as DiscordModules } from "./types-sIZbooUK.js";
+import { G as DiscordModules } from "./types-CaDll09F.js";
 declare namespace flux_d_exports {
   export { Dispatcher, DispatcherModuleId };
 }

@@ -15,6 +15,9 @@
         "./hidden": {
             "types": "./hidden.d.ts"
         },
+        "./plugins/settings.plugins": {
+            "types": "./plugins/settings.plugins.d.ts"
+        },
         "./modules.importmap.json": {
             "default": "./modules.importmap.json"
         },

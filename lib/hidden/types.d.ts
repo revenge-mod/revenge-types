@@ -1,2 +1,2 @@
-import { a as HiddenApiModulesMetro, i as HiddenApiModules, n as HiddenApiAssets, o as HiddenApiPlugins, r as HiddenApiDiscord, s as HiddenApiReact, t as HiddenApi } from "../../types-DTbyhegv.js";
+import { a as HiddenApiModulesMetro, i as HiddenApiModules, n as HiddenApiAssets, o as HiddenApiPlugins, r as HiddenApiDiscord, s as HiddenApiReact, t as HiddenApi } from "../../types-BOHctzI2.js";
 export { HiddenApi, HiddenApiAssets, HiddenApiDiscord, HiddenApiModules, HiddenApiModulesMetro, HiddenApiPlugins, HiddenApiReact };

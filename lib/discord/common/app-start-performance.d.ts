@@ -1,2 +1,2 @@
-import { n as AppStartPerformance } from "../../../app-start-performance-D4-l91af.js";
+import { n as AppStartPerformance } from "../../../app-start-performance-DOyUqX27.js";
 export { AppStartPerformance };

@@ -1,4 +1,4 @@
-import { a as AnyObject } from "../../types-sIZbooUK.js";
+import { a as AnyObject } from "../../types-CaDll09F.js";
 import { JsonStorage, JsonStorageOptions } from "../json-storage.js";
 //#region lib/json-storage/src/types.d.ts
 declare module '@revenge-mod/plugins/types' {

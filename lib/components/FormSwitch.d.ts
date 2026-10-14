@@ -1,4 +1,4 @@
-import { U as DiscordModules } from "../../types-sIZbooUK.js";
+import { G as DiscordModules } from "../../types-CaDll09F.js";
 //#region lib/components/src/FormSwitch.d.ts
 /**
  * A switch component that is styled to match Discord's configuration

@@ -1,4 +1,4 @@
-import { P as Filter, c as If, f as Not, n as Metro, t as MaybeDefaultExportMatched, z as FilterResult } from "./types-sIZbooUK.js";
+import { I as Filter, V as FilterResult, c as If, f as Not, n as Metro, t as MaybeDefaultExportMatched } from "./types-CaDll09F.js";
 declare namespace _internal_d_exports {
   export { FilterResultFlag, FilterResultFlagToHumanReadable, FilterResultFlags, RunFilterOptions, RunFilterReturnExportsOptions, exportsFromFilterResultFlag, noDefaultExportsCache, runFilter };
 }
@@ -7,6 +7,11 @@ interface RunFilterOptions {
    * Whether to skip checking the default export.
    *
    * @default false
+   * @deprecated Wrap the filter with {@link namespaceOnly} instead, so it doesn't depend on the lookup:
+   *
+   * ```ts
+   * namespaceOnly(filter)
+   * ```
    */
   skipDefault?: boolean;
   /**

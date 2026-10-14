@@ -1,4 +1,4 @@
-import { U as DiscordModules } from "../types-sIZbooUK.js";
+import { G as DiscordModules } from "../types-CaDll09F.js";
 import FormSwitch from "./components/FormSwitch.js";
 import Page from "./components/Page.js";
 import SearchInput from "./components/SearchInput.js";

@@ -1,4 +1,4 @@
-import { a as AnyObject, c as If, o as DeepPartial } from "../types-sIZbooUK.js";
+import { a as AnyObject, c as If, o as DeepPartial } from "../types-CaDll09F.js";
 //#region lib/json-storage/src/index.d.ts
 /**
  * Get the storage path for a plugin's JSON storage document.

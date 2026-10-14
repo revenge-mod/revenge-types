@@ -1013,6 +1013,28 @@ declare const anyOf: (<F1 extends FilterBase, F2 extends FilterBase>(f1: F1, f2:
   keyFor: (args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]) => string;
   defaultScopesFor: (args: [f1: FilterBase<DefaultFilterInfo>, f2: FilterBase<DefaultFilterInfo>]) => FilterScopeValue;
 };
+type NamespaceOnly = FilterGenerator<<F extends FilterBase>(filter: F) => Filter<FilterInfoOf<F>>>;
+/**
+ * Matches the filter against the module namespace only, excluding its `default` export.
+ *
+ * Works on what the filter is run against, so it also applies inside composite filters.
+ * Uninitialized modules are left to the filter.
+ *
+ * @param filter The filter to match against the module namespace.
+ *
+ * @example
+ * ```ts
+ * // Matches { x }, but not { default: { x } }
+ * const [SomeModule] = lookupModule(namespaceOnly(withProps('x')))
+ * ```
+ */
+declare const namespaceOnly: (<F extends FilterBase>(filter: F) => Filter<FilterInfoOf<F>>) & {
+  keyFor(args: [filter: FilterBase<DefaultFilterInfo>]): string;
+  defaultScopesFor(args: [filter: FilterBase<DefaultFilterInfo>]): FilterScopeValue;
+} & {
+  keyFor: (args: [filter: FilterBase<DefaultFilterInfo>]) => string;
+  defaultScopesFor: (args: [filter: FilterBase<DefaultFilterInfo>]) => FilterScopeValue;
+};
 //#endregion
 //#region lib/modules/src/finders/filters/dynamic.d.ts
 /** @internal This structure is not stable, and should only be referenced internally. */
@@ -1168,7 +1190,7 @@ declare function unordered(deps: ComparableDependencyMap): ComparableDependencyM
  */
 declare function relative(magnitude: Metro.ModuleID, root?: boolean): number;
 declare namespace index_d_exports {
-  export { AllOf, AnyOf, ComparableDependencyMap, DefaultFilterInfo, Filter, FilterBase, FilterGenerator, FilterHelpers, FilterInfo, FilterInfoOf, FilterResult, FilterScope, FilterScopeValue, FilterScopes, MergeFilterInfo, UnionFilterInfo, WithName, WithProps, WithSingleProp, WithoutProps, allOf, anyOf, createFilterGenerator, withDependencies, withName, withProps, withSingleProp, withoutProps };
+  export { AllOf, AnyOf, ComparableDependencyMap, DefaultFilterInfo, Filter, FilterBase, FilterGenerator, FilterHelpers, FilterInfo, FilterInfoOf, FilterResult, FilterScope, FilterScopeValue, FilterScopes, MergeFilterInfo, NamespaceOnly, UnionFilterInfo, WithName, WithProps, WithSingleProp, WithoutProps, allOf, anyOf, createFilterGenerator, namespaceOnly, withDependencies, withName, withProps, withSingleProp, withoutProps };
 }
 type FilterRequiringExports<T> = Filter<{
   Result: T;
@@ -1389,4 +1411,4 @@ type MaybeDefaultExportMatched<T> = T | {
   default: T;
 };
 //#endregion
-export { SearchFilter as $, AllOf as A, MergeFilterInfo as B, index_d_exports as C, withoutProps as D, withSingleProp as E, FilterBase as F, FilterInfo as G, createFilterGenerator as H, FilterGenerator as I, FilterScopes as J, FilterScope as K, FilterHelpers as L, allOf as M, anyOf as N, ComparableDependencyMap as O, Filter as P, FindInTreeOptions as Q, FilterInfoOf as R, WithoutProps as S, withProps as T, DiscordModules as U, UnionFilterInfo as V, DefaultFilterInfo as W, useIsFirstRender as X, findInReactFiber as Y, useReRender as Z, lookupGeneratedIconComponent as _, AnyObject as a, isObject as at, WithProps as b, If as c, debounce as ct, LogicalOr as d, SearchTree as et, Not as f, WithGeneratedIconComponent as g, PreInitPluginApiUtils as h, AnyFunction as i, defineLazyProperty as it, AnyOf as j, withDependencies as k, KeyWithType as l, noop as lt, PluginApiUtils as m, Metro as n, cloneDeep as nt, DeepPartial as o, mergeDeep as ot, Nullish as p, FilterScopeValue as q, RevengeMetro as r, defineLazyProperties as rt, ExtractPredicate as s, asap as st, MaybeDefaultExportMatched as t, findInTree as tt, LogicalAnd as u, withGeneratedIconComponent as v, withName as w, WithSingleProp as x, WithName as y, FilterResult as z };
+export { useReRender as $, AllOf as A, FilterInfoOf as B, index_d_exports as C, withoutProps as D, withSingleProp as E, namespaceOnly as F, DiscordModules as G, MergeFilterInfo as H, Filter as I, FilterScope as J, DefaultFilterInfo as K, FilterBase as L, NamespaceOnly as M, allOf as N, ComparableDependencyMap as O, anyOf as P, useIsFirstRender as Q, FilterGenerator as R, WithoutProps as S, withProps as T, UnionFilterInfo as U, FilterResult as V, createFilterGenerator as W, FilterScopes as X, FilterScopeValue as Y, findInReactFiber as Z, lookupGeneratedIconComponent as _, AnyObject as a, defineLazyProperties as at, WithProps as b, If as c, mergeDeep as ct, LogicalOr as d, noop as dt, FindInTreeOptions as et, Not as f, WithGeneratedIconComponent as g, PreInitPluginApiUtils as h, AnyFunction as i, cloneDeep as it, AnyOf as j, withDependencies as k, KeyWithType as l, asap as lt, PluginApiUtils as m, Metro as n, SearchTree as nt, DeepPartial as o, defineLazyProperty as ot, Nullish as p, FilterInfo as q, RevengeMetro as r, findInTree as rt, ExtractPredicate as s, isObject as st, MaybeDefaultExportMatched as t, SearchFilter as tt, LogicalAnd as u, debounce as ut, withGeneratedIconComponent as v, withName as w, WithSingleProp as x, WithName as y, FilterHelpers as z };
